@@ -1,3 +1,10 @@
 .jumbotron{
     text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+.title{
+    font-size: 90px;
+    font-family: 'Permanent Marker', cursive;
 }
