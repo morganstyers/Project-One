@@ -10,7 +10,7 @@ $(document).ready(function () {
       navigator.geolocation.getCurrentPosition(showPosition);
     } else {
     }
-
+    
   });
 
   function showPosition(position) {

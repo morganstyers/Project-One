@@ -7,7 +7,12 @@
     padding-top: 10px;
     z-index: 3;
 }
+.scroll{
+  
+    max-height: 200px;
+    overflow-y: auto;
 
+}
 html {
     scroll-behavior: smooth;
   }
@@ -204,6 +209,7 @@ img{
   width:100%;
 }
 #r{
+font-size: 20;
 display:none;
 background: #fff;
 color: black;
