@@ -1,6 +1,6 @@
 console.log("linked")
 
-$("#submit-button").on("click", function () {
+$(".btn").on("click", function () {
 
     var city = "charlotte"//$("#city-input");
     var state = "north carolina"//$("#state-input");
