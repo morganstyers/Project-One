@@ -1,3 +1,5 @@
+console.log("linked")
+
 $("#submit-button").on("click", function () {
 
     var city = "charlotte"//$("#city-input");
@@ -6,3 +8,5 @@ $("#submit-button").on("click", function () {
 console.log(queryurl)
 
 });
+
+console.log("linked")
