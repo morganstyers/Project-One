@@ -1,37 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/393d5a4505.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <title>Peruse For Brews||Get Started</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/393d5a4505.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Peruse For Brews||Get Started</title>
 </head>
+
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Learn More</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="./index.html">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="./LearnMore.html">Get Started</a>
-                  </div>
-                </div>
-              </nav>
-              <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                  <h1 class="display-4">THIS IS LEARN MORE SORRY TO YELL</h1>
-                  <p class="lead"></p>
-                </div>
-              </div>
-    <script src="app.js"></script>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Peruse</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="./index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="./LearnMore.html">Learn More</a>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron jumbotron-fluid">
+    <h1 class="display-4">Peruse</h1>
+    <p class="lead"></p>
+  </div>
+  <div class="container">
+    <form>
+
+        <div class="form-group">
+            <label for="exampleInputCity">City</label>
+            <input type="password" class="form-control" id="exampleInputCity" placeholder="City">
+          </div>
+
+      <div class="form-group">
+        <label for="exampleInputState">Select State</label>
+        <input type="state" class="form-control" id="exampleInputState" aria-describedby="stateHelp"
+          placeholder="Enter state">
+        <small id="stateHelp" class="form-text text-muted">We can add text here if we want to share with the user.</small>
+      </div>
+
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check for Reviews Maybe?</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+        <!--MO: Added card with a link to LYFT, probably needs to be redone-->
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://media.licdn.com/dms/image/C4E1BAQEC6j5sG-J1cQ/company-background_10000/0?e=2159024400&v=beta&t=zOfzITfEW_ekk9F5fxRRUTTX4qiAvLmrrVUbFlxc5hg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Need a Lyft?</p>
+              <a href="https://www.lyft.com/rider" class="card-link">Lyft</a>
+            </div>
+          </div>
+</div>
+
+  
+  <script src="app.js"></script>
 </body>
+
 </html>
