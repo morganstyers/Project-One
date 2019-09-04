@@ -9,4 +9,3 @@ console.log(queryurl)
 
 });
 
-console.log("linked")
