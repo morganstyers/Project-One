@@ -1,16 +1,11 @@
 console.log("linked")
 
 
-$("#start").on("click", function () {
+$("#search").on("click", function () {
     event.preventDefault();
-    var city = "charlotte"//$("#city-input");
-    var state = "north_carolina"//$("#state-input");
 
-
-
-    var city = "charlotte"//$("#city-input");
-    var state = "north carolina"//$("#state-input");
-
+    var city = $("#city-input");
+    var state =$("#state-input");
     var queryurl = "https://api.openbrewerydb.org/breweries?by_city=" + city + "&by_state=" + state;
 console.log(queryurl)
 $.ajax({
@@ -34,6 +29,10 @@ $.ajax({
         // 
     }
 })
+
 });
+
+
+
 
 
