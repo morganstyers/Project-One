@@ -3,6 +3,8 @@ console.log("linked")
 
 $("#search").on("click", function () {
     event.preventDefault();
+<<<<<<< Updated upstream
+=======
     var city = "charlotte"//$("#city-input");
     var state = "north_carolina"//$("#state-input");
 
@@ -10,6 +12,7 @@ $("#search").on("click", function () {
 
     var city = "charlotte"//$("#city-input");
     var state = "north_carolina"//$("#state-input");
+>>>>>>> Stashed changes
 
     var city = $("#city-input");
     var state =$("#state-input");
@@ -30,16 +33,9 @@ $.ajax({
        if (results[i].longitude === null || results[i].longitude === "") {
            i++
        } else {
-            longAnswer.push(results[0].longitude);
-            latAnswer.push(results[0].latitude);
-            var queryurl = "https://api.tomtom.com/search/2/categorySearch/company,brewery.json?key=Ab4s6zW0kUp03AlC2DusRDhwK6rkp5Ap&lat=" + latAnswer + "&lon=" + longAnswer + "&radius=13094"
-            $.ajax({
-                url: queryurl,
-                method: "GET"
-            }) 
-            .then(function(response){
-
-            })
+<<<<<<< Updated upstream
+            longAnswer.push(results[0].longitude)
+            latAnswer.push(results[0].latitude) 
        }
      
 
@@ -48,6 +44,16 @@ $.ajax({
     //console.log(results[i].longitude)
     console.log("long answer" + longAnswer[0])
     console.log("lat answer" + latAnswer[0])
+=======
+            answer.push(results[i].longitude)
+            answer.push(results[i].latitude)
+       }
+       //console.log(results[i].longitude)
+    
+        // 
+    }
+    console.log("Answer: " + latAnswer)
+>>>>>>> Stashed changes
 })
 
 });
