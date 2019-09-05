@@ -1,5 +1,8 @@
 console.log("linked")
-
+$(document).ready(function() {
+    $("#results").hide();
+    $("#MyModal").modal();
+  });
 
 $("#search").on("click", function () {
     event.preventDefault();
@@ -10,6 +13,7 @@ $("#search").on("click", function () {
 
     var city = "charlotte"//$("#city-input");
     var state = "north_carolina"//$("#state-input");
+    $("#results").show();
 
     var city = $("#city-input");
     var state =$("#state-input");
@@ -45,12 +49,17 @@ $.ajax({
 
     
     }
+
+   
+
     //console.log(results[i].longitude)
     console.log("long answer" + longAnswer[0])
     console.log("lat answer" + latAnswer[0])
+
 })
 
 });
+
 
 
 
