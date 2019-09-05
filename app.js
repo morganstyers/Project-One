@@ -34,8 +34,11 @@ $.ajax({
     console.log("long answer" + longAnswer[0])
     console.log("lat answer" + latAnswer[0])
 })
-
+$(document).ready(function() {
+    $("#MyModal").modal();
+  });
 });
+
 
 
 
