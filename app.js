@@ -60,7 +60,7 @@ console.log("linked")
 
 // });
 
-$("#getLocation").on("click", function getLocation() {
+$("#search").on("click", function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
     } else { 
@@ -73,15 +73,23 @@ $("#getLocation").on("click", function getLocation() {
     console.log(latCoord);
     console.log(longCoord);
 
-    var queryurl = "https://api.tomtom.com/search/2/categorySearch/company,brewery.json?key=Ab4s6zW0kUp03AlC2DusRDhwK6rkp5Ap&lat=" + latCoord + "&lon=" + longCoord + "&radius=13094"
+    var queryurl = "https://api.tomtom.com/search/2/categorySearch/company,brewery.json?key=Ab4s6zW0kUp03AlC2DusRDhwK6rkp5Ap&lat=" + latCoord + "&lon=" + longCoord + "&radius=13094&limit=5"
     $.ajax({
         url: queryurl,
         method: "GET"
     }) 
     .then(function(response){
+        // put into html
+        for (var i = 0; i < response.results; i++) {
+        var newDiv = $("<div>");
+        var newUl = $("<ul>");
+        var newLi = $("<li>");
+        newUl.append(li);
+        newDiv.append(ul);
+        }
+        console.log(response)
 
     })
-    console.log(response)
   }
 
 
