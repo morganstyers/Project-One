@@ -1,8 +1,12 @@
 console.log("linked")
-
+$(document).ready(function() {
+    $("#results").hide();
+    $("#MyModal").modal();
+  });
 
 $("#search").on("click", function () {
     event.preventDefault();
+    $("#results").show();
 
     var city = $("#city-input");
     var state =$("#state-input");
@@ -28,10 +32,9 @@ $.ajax({
        console.log(answer)
         // 
     }
+   
 })
-$(document).ready(function() {
-    $("#MyModal").modal();
-  });
+
 });
 
 
