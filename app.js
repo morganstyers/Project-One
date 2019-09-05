@@ -60,6 +60,19 @@ $.ajax({
 
 });
 
+$("#getLocation").on("click", function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+    }
+  })
+  
+  function showPosition(position) {
+    var latCoord = position.coords.latitude; 
+    var longCoord = position.coords.longitude;
+    console.log(latCoord);
+    console.log(longCoord);
+  }
 
 
 
