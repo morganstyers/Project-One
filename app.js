@@ -72,6 +72,16 @@ $("#getLocation").on("click", function getLocation() {
     var longCoord = position.coords.longitude;
     console.log(latCoord);
     console.log(longCoord);
+
+    var queryurl = "https://api.tomtom.com/search/2/categorySearch/company,brewery.json?key=Ab4s6zW0kUp03AlC2DusRDhwK6rkp5Ap&lat=" + latCoord + "&lon=" + longCoord + "&radius=13094"
+    $.ajax({
+        url: queryurl,
+        method: "GET"
+    }) 
+    .then(function(response){
+
+    })
+    console.log(response)
   }
 
 
