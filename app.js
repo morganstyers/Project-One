@@ -1,8 +1,12 @@
 console.log("linked")
-
+$(document).ready(function() {
+    $("#results").hide();
+    $("#MyModal").modal();
+  });
 
 $("#search").on("click", function () {
     event.preventDefault();
+    $("#results").show();
 
     var city = $("#city-input");
     var state =$("#state-input");
@@ -30,13 +34,15 @@ $.ajax({
 
     
     }
+
+   
+
     //console.log(results[i].longitude)
     console.log("long answer" + longAnswer[0])
     console.log("lat answer" + latAnswer[0])
+
 })
-$(document).ready(function() {
-    $("#MyModal").modal();
-  });
+
 });
 
 
