@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
 console.log("linked")
+<<<<<<< HEAD
 
 var state ="";
 var city ="";
@@ -10,9 +11,16 @@ $("select").change(function() {
   state=$("select option:selected").text();
   console.log(state);
 });
+=======
+$(document).ready(function() {
+    $("#results").hide();
+    $("#MyModal").modal();
+  });
+>>>>>>> c401c1f54072992e598bd3f38c1b4ec6f128d660
 
 $("#search").on("click", function () {
     event.preventDefault();
+    $("#results").show();
 
     city = $("#city-input");
     //state =$("#state-input");
@@ -41,11 +49,23 @@ $.ajax({
 
     
     }
+
+   
+
     //console.log(results[i].longitude)
     console.log("long answer" + longAnswer[0])
     console.log("lat answer" + latAnswer[0])
+
 })
 
 });
 
+<<<<<<< HEAD
 });
+=======
+
+
+
+
+
+>>>>>>> c401c1f54072992e598bd3f38c1b4ec6f128d660
