@@ -1,11 +1,22 @@
+$(document).ready(function () {
+
 console.log("linked")
 
+var state ="";
+var city ="";
+
+$("select").change(function() {
+    console.log("selected");
+  state=$("select option:selected").text();
+  console.log(state);
+});
 
 $("#search").on("click", function () {
     event.preventDefault();
 
-    var city = $("#city-input");
-    var state =$("#state-input");
+    city = $("#city-input");
+    //state =$("#state-input");
+    console.log($("#state-input").attr("selected"))
     var queryurl = "https://api.openbrewerydb.org/breweries?by_city=" + city + "&by_state=" + state;
 console.log(queryurl)
 $.ajax({
@@ -37,7 +48,4 @@ $.ajax({
 
 });
 
-
-
-
-
+});
