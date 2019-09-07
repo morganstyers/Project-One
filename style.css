@@ -23,3 +23,26 @@ h3{
 i{
     margin: auto; 
 }
+
+button{
+    font-family: 'Permanent Marker', cursive;
+}
+
+#learn{
+    font-family: 'Permanent Marker', cursive;
+}
+
+#lead{
+    font-family: 'Karla', sans-serif;
+}
+p{
+    font-family: 'Karla', sans-serif;
+}
+
+.navbar{
+    font-family: 'Permanent Marker', cursive;
+}
+
+#peruse{
+    font-family: 'Permanent Marker', cursive; 
+}
