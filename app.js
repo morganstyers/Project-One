@@ -19,7 +19,7 @@ function beerRise() {
 
   setTimeout(function() {
     pourBeer();
-  }, 3000)
+  }, 1700)
 $("#search").on("click", function () {
     event.preventDefault();
     
@@ -29,16 +29,16 @@ $("#search").on("click", function () {
     .animate({
       height: '360px'
       }, 1500)
-    .delay(1600)
-    .slideUp(500);
+    .delay(1700)
+    .slideUp("slow",100);
   
-  $('#liquid') // I Said Fill 'Er Up!
+  $('#liquid') 
     .delay(3400)
     .animate({
       height: '170px'
     }, 2500);
   
-  $('.beer-foam') // Keep that Foam Rollin' Toward the Top! Yahooo!
+  $('.beer-foam')
     .delay(3400)
     .animate({
       bottom: '200px'
