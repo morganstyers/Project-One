@@ -1,12 +1,17 @@
+
 .jumbotron{
     text-align: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 5%;
+    display: block;
+    margin: auto;
+     
 }
+
 html {
     scroll-behavior: smooth;
   }
+
+
+
 .title{
     font-size: 90px;
     font-family: 'Permanent Marker', cursive;
@@ -15,6 +20,7 @@ html {
 h3{
     text-align: center;
 }
+
 #section1 {
     height: 600px;}
 #section2 {
@@ -128,3 +134,37 @@ h3{
             height: 0;
           }
           
+
+
+.row {
+
+    margin-left: 43%; 
+}
+
+i{
+    margin: auto; 
+}
+
+button{
+    font-family: 'Permanent Marker', cursive;
+}
+
+#learn{
+    font-family: 'Permanent Marker', cursive;
+}
+
+#lead{
+    font-family: 'Karla', sans-serif;
+}
+p{
+    font-family: 'Karla', sans-serif;
+}
+
+.navbar{
+    font-family: 'Permanent Marker', cursive;
+}
+
+#peruse{
+    font-family: 'Permanent Marker', cursive; 
+}
+
