@@ -1,9 +1,11 @@
+
 .jumbotron{
     text-align: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 5%;
+    display: block;
+    margin: auto;
+     
 }
+
 .title{
     font-size: 90px;
     font-family: 'Permanent Marker', cursive;
@@ -13,4 +15,11 @@ h3{
     text-align: center;
 }
 
-    
+.row {
+
+    margin-left: 43%; 
+}
+
+i{
+    margin: auto; 
+}
