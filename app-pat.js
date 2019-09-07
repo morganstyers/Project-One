@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     console.log("linked")
 
-    var state = "";
+/*     var state = "";
     var city = "";
 
     $("select").change(function () {
@@ -66,33 +66,66 @@ $(document).ready(function () {
 
             })
 
-    });
+    }); */
 
-    $("#getLocation").on("click", function getLocation() {
+    $("#search").on("click", function getLocation() {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
         }
-    })
-
-    function showPosition(position) {
-        var latCoord = position.coords.latitude;
+      });
+      
+      function showPosition(position) {
+        var latCoord = position.coords.latitude; 
         var longCoord = position.coords.longitude;
         console.log(latCoord);
         console.log(longCoord);
-
-        var queryurl = "https://api.tomtom.com/search/2/categorySearch/company,brewery.json?key=Ab4s6zW0kUp03AlC2DusRDhwK6rkp5Ap&lat=" + latCoord + "&lon=" + longCoord + "&radius=13094"
+        var queryurl = "https://api.tomtom.com/search/2/categorySearch/company,brewery.json?key=Ab4s6zW0kUp03AlC2DusRDhwK6rkp5Ap&lat=" + latCoord + "&lon=" + longCoord + "&radius=13094&limit=5"
         $.ajax({
             url: queryurl,
             method: "GET"
-        })
-            .then(function (response) {
+        }) 
+        .then(function(response){
+            // put into html
+            for (var i = 0; i < response.results.length; i++) {
+            var address = response.results[i].address.freeformAddress;
+            var name = response.results[i].poi.name;
+            var phone = response.results[i].poi.phone;
+            console.log(address);
+            console.log(name);
+            console.log(phone);
+            var newDiv = $("<div>");
+            var newUl = $("<ul>");
+            var newLi = $("<li>");
+            newLi.html(address, name, phone);
+            newUl.append(newLi);
+            newDiv.append(newUl);
+            $(".card-text").append(newDiv)
+            } 
 
+            console.log(name);
+            
+            var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + name + "&limit=25"
+            console.log(queryurl)
+            $.ajax({
+                url: queryurl,
+                method: "GET",
+                "headers": {
+                    "Authorization": "Bearer cycx3mtFkOQeQ1bqEXUg_25bMQ5oPNvpF554EnE87a8YVWOQs9yXy0-61ZsFOi7v0_GqqkT07ij0PpKlUnKzfe396NQmdDJrWvbi8BhnTkoRVuyJb5VPziQbz8ZzXXYx",
+                }
             })
-        console.log(response)
-    }
+                .then(function (response) {
+                    console.log(response)
 
 
+      
+   
+    
+    })
+
+        });
 
 
-})
+}
+});
