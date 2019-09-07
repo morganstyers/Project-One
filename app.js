@@ -84,23 +84,36 @@ $("#getLocation").on("click", function getLocation() {
     .then(function(response){
         // put into html
         for (var i = 0; i < response.results.length; i++) {
-
-        var address = response.results[i].address.freeformAddress;
+        
         var name = response.results[i].poi.name;
+        var address = response.results[i].address.freeformAddress;
         var phone = response.results[i].poi.phone;
-        console.log(address);
-        console.log(name);
-        console.log(phone);
+
+        if (phone === null || phone === undefined) {
+            phone = "";
+        }
+        var breweryData = {
+            name: name,
+            address: address,
+            phone: phone,
+        }; 
+        console.log("Address: " + breweryData.address);
+        console.log(breweryData.name);
+        console.log(breweryData.phone);
+        console.log(breweryData);
 
         var newDiv = $("<div>");
         var newUl = $("<ul>");
-        var newLi = $("<li>");
+        var newLi = $("<li>").html(breweryData.name + "<br>" + breweryData.address + "<br>" + breweryData.phone);
+        
+        // newLi.html(name);
+        // newLi.html(address);
+        // newLi.html(phone);
 
-        newLi.html(address, name, phone);
         newUl.append(newLi);
         newDiv.append(newUl);
 
-        $(".card-text").append(newDiv)
+        $(".card-body").append(newDiv)
         }
 
            
