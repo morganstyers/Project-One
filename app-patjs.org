@@ -60,11 +60,13 @@ $(document).ready(function () {
 
 
 
-                //console.log(results[i].longitude)
-                console.log("long answer" + longAnswer[0])
-                console.log("lat answer" + latAnswer[0])
+})
+$("getLocation").on('click', function(){
+    $("#MyModal").modal();
+})
+});
 
-            })
+           
 
     }); */
 

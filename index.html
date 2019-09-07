@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Puruse For Brews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
+        
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
         integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
         crossorigin="anonymous"></script>
@@ -26,32 +30,51 @@
 </head>
 
 <body>
+    <div id="section1">
     <div class="jumbotron text-white bg-dark">
         <h1 class="title">Peruse For Brews</h1>
-        <div class="fa-4x">
-            <i class="fas fa-beer fa-spin"></i>
-        </div>
+
+                   <p class="lead">It's Simple! Wherever You Are, Find Somewhere To Unwind.</p>
+                   <body>
+
+                        <div id="container">
+                        <div class="glass">
+                          <div class="beer"></div>
+                        </div>
+                        <div class="head"></div>
+                        <div class="pour"></div>
+                      </div>
+
         <p class="lead">It's Simple! Wherever You Are, Find Somewhere To Unwind.</p>
+
         <hr class="my-4">
         <p>Just Enter Your Location To Start Relaxing</p>
 
         <div class="container">
-            <div class="row">
-                <span><button id="search" type="submit" class="btn btn-outline-light">Get Started</button></span>
+
+                <span><a id="start" href="#section2" role="button" class="btn btn-outline-light">Get Started</a>
                 <span><a href="LearnMore.html" id="learn" role="button"
                         class="btn btn-outline-light">Learn More</a></span>
+
+            <div class="row">
+                              <span><a href="LearnMore.html" id="learn" role="button"
+                        class="btn btn-outline-light" class="mx-auto">Learn More</a></span>
             </div>
+
         </div>
     </div>
-
+</div>
+<div id="section2">
     <div id="results" class="card">
         <div class="card-body">
             <div>
-                <span><button id="getLocation" type="submit" class="btn btn-outline-light">Get Location</button></span>
-                <span><button id="review" type="submit" class="btn btn-outline-light">Reviews</button></span>
+                <span><button id="getLocation" type="submit" class="btn btn-dark">Get Location</button></span>
+                <span><button id="review" type="submit" class="btn btn-dark">Reviews</button></span>
             </div>
+
             <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
-                Need A Lyft? </button>
+                Get a DD! </button>
+
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -62,14 +85,12 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
-                            <div class="card" style="width: 18rem;">
-                                <img src="https://media.licdn.com/dms/image/C4E1BAQEC6j5sG-J1cQ/company-background_10000/0?e=2159024400&v=beta&t=zOfzITfEW_ekk9F5fxRRUTTX4qiAvLmrrVUbFlxc5hg"
-                                    class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="https://www.lyft.com/rider" class="card-link">Lyft</a>
-                                </div>
-                            </div>
+                        <div class="modal-body"> 
+                                    <i class="fab fa-uber" style="font-size: 80px;" href= ""class="card-link"
+                                    class="card-img-top" alt="..."></i>
+                               <p>Uber</p>    
+                               <i class="fas fa-paw"></i>                            
+                            
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">No Thanks!</button>
@@ -79,7 +100,7 @@
             </div>
         </div>
     </div>
-
+</div>
     <!--age verifcation modal-->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
