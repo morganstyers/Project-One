@@ -84,9 +84,9 @@ $("#getLocation").on("click", function getLocation() {
     .then(function(response){
         // put into html
         for (var i = 0; i < response.results.length; i++) {
-
-        var address = response.results[i].address.freeformAddress;
+        
         var name = response.results[i].poi.name;
+        var address = response.results[i].address.freeformAddress;
         var phone = response.results[i].poi.phone;
         console.log(address);
         console.log(name);
@@ -95,8 +95,11 @@ $("#getLocation").on("click", function getLocation() {
         var newDiv = $("<div>");
         var newUl = $("<ul>");
         var newLi = $("<li>");
+        
+        newLi.html(name);
+        newLi.html(address);
+        newLi.html(phone);
 
-        newLi.html(address, name, phone);
         newUl.append(newLi);
         newDiv.append(newUl);
 
