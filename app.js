@@ -50,7 +50,10 @@ console.log("linked")
     
 //     }
 
-   
+        //    // .then(function (response) {
+        //         var results = response;
+        //         var longAnswer = [];
+        //         var latAnswer = [];
 
 //     //console.log(results[i].longitude)
 //     console.log("long answer" + longAnswer[0])
@@ -100,8 +103,11 @@ $("#getLocation").on("click", function getLocation() {
         $(".card-text").append(newDiv)
         }
 
-    })
-  }
+           
+
+    });
+
+}
 
 
 
