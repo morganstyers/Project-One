@@ -88,14 +88,17 @@ $("#getLocation").on("click", function getLocation() {
         var name = response.results[i].poi.name;
         var address = response.results[i].address.freeformAddress;
         var phone = response.results[i].poi.phone;
+        var website = response.results[i].poi.url;
 
-        if (phone === null || phone === undefined) {
+        if (phone === null || phone === undefined || website === null || website === undefined) {
             phone = "";
+            website = "";
         }
         var breweryData = {
             name: name,
             address: address,
             phone: phone,
+            website: website,
         }; 
         console.log("Address: " + breweryData.address);
         console.log(breweryData.name);
@@ -104,7 +107,7 @@ $("#getLocation").on("click", function getLocation() {
 
         var newDiv = $("<div>");
         var newUl = $("<ul>");
-        var newLi = $("<li>").html(breweryData.name + "<br>" + breweryData.address + "<br>" + breweryData.phone);
+        var newLi = $("<li>").html(breweryData.name + "<br>" + breweryData.address + "<br>" + breweryData.phone + "<br>" + breweryData.website);
         
         // newLi.html(name);
         // newLi.html(address);
