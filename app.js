@@ -9,7 +9,7 @@ function beerRise() {
     $('.head').addClass('active');
   }
 
-  function pourBeer() {
+    function pourBeer() {
     $('.pour').addClass('pouring');
     beerRise();
     setTimeout(function() {
@@ -21,6 +21,8 @@ function beerRise() {
   setTimeout(function() {
     pourBeer();
   }, 3000)
+
+
 $("#search").on("click", function () {
     event.preventDefault();
     
@@ -45,7 +47,7 @@ $("#search").on("click", function () {
       bottom: '200px'
       }, 2500);
   });
-    
+});
   
 $("#getLocation").on("click", function getLocation() {
     if (navigator.geolocation) {
@@ -101,24 +103,12 @@ $("#getLocation").on("click", function getLocation() {
         newDiv.append(newUl);
 
         $(".card-body").append(newDiv)
-        }
+    }
 
 
 })
+
 $("getLocation").on('click', function(){
     $("#MyModal").modal();
 })
-});
-
-           
-
-    });
-
-
 }
-
-
-
-
-
-
