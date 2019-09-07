@@ -60,7 +60,7 @@ console.log("linked")
 
 // });
 
-$("#search").on("click", function getLocation() {
+$("#getLocation").on("click", function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
     } else { 
@@ -80,14 +80,25 @@ $("#search").on("click", function getLocation() {
     }) 
     .then(function(response){
         // put into html
-        for (var i = 0; i < response.results; i++) {
+        for (var i = 0; i < response.results.length; i++) {
+
+        var address = response.results[i].address.freeformAddress;
+        var name = response.results[i].poi.name;
+        var phone = response.results[i].poi.phone;
+        console.log(address);
+        console.log(name);
+        console.log(phone);
+
         var newDiv = $("<div>");
         var newUl = $("<ul>");
         var newLi = $("<li>");
-        newUl.append(li);
-        newDiv.append(ul);
+
+        newLi.html(address, name, phone);
+        newUl.append(newLi);
+        newDiv.append(newUl);
+
+        $(".card-text").append(newDiv)
         }
-        console.log(response)
 
     })
   }
