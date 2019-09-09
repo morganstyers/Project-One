@@ -112,8 +112,9 @@ $(document).ready(function () {
                       })
                           .then(function (response) {
                               console.log(response);
-      
-      
+                              var reviewUrl = response.reviews[0].url;
+                              console.log("Yelp URL " + reviewUrl);
+                              
         
                           });
                     }
