@@ -92,7 +92,7 @@ h3{
             left: 5px;
             border-radius: 50%;
             z-index: -1;
-            transition: 1600ms ease-in;
+            transition: 1000ms;
           }
           #container .head.active {
             bottom: 82%;
@@ -119,11 +119,10 @@ h3{
           #container .pour {
             position: absolute;
             width: 20px;
-            height: 200%;
-            background: #fac92c;
-            border-radius: 20px;
+            height: 190%;
+            border-radius: 0px;
             left: 10px;
-            z-index: -1;
+            z-index: 1;
             bottom: 150%;
             transition: 300ms ease-in;
           }
@@ -133,9 +132,6 @@ h3{
           #container .pour.end {
             height: 0;
           }
-          
-
-
 .row {
 
     margin-left: 43%; 
@@ -160,14 +156,20 @@ p{
     font-family: 'Karla', sans-serif;
 }
 
-.navbar{
-    font-family: 'Permanent Marker', cursive;
-}
-
 #peruse, h5{
     font-family: 'Permanent Marker', cursive; 
 }
-
+#section2{
+  text-align: center;
+}
+#learnMore{
+  align-items: center;
+  display: block;
+}
+.people{
+margin: auto;
+text-align: center;
+}
 #learnMoreJT{
     background-color: #e9aa1815;
     z-index: 2;
@@ -180,14 +182,21 @@ p{
     z-index: 2;
     position: relative;
     height: 200px;
+    width: 1200px;
+    margin: auto; 
  
 }
 .card-body{
-
     
     font-family: 'Karla', sans-serif;
     
-    
+}
+
+.card{
+    background-color: #e9aa1815;
+    color: rgb(255, 255, 255); 
+    border-color: rgba(255, 255, 255, 0);
+
 }
 
 img{
@@ -196,3 +205,4 @@ img{
     margin-left:35%;
     display: flex;
 }
+

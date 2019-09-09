@@ -12,20 +12,9 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
-        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
-        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/393d5a4505.js"></script>
-
 
 </head>
 
@@ -34,6 +23,8 @@
         <div class="jumbotron text-white bg-dark">
             <h1 class="title">Peruse For Brews</h1>
 
+            <p class="lead">It's Simple! Wherever You Are, Find Somewhere To Unwind.</p>
+
             <div id="container">
                 <div class="glass">
                     <div class="beer"></div>
@@ -41,30 +32,33 @@
                 <div class="head"></div>
                 <div class="pour"></div>
             </div>
+            <hr class="my-4">
+            <p>Just Enter Your Location To Start Relaxing</p>
 
-            <p class="lead">It's Simple! Wherever You Are, Find Somewhere To Unwind.</p>
-
-                       <div class="container">
-
-                <span><a id="start" href="#section2" role="button" class="btn btn-outline-light">Start</a>
-                    <span><a href="LearnMore.html" id="learn" role="button" class="btn btn-outline-light">Learn
-                            More</a></span>
-
+            <div class="container">
+                <a id="start" href="#section2" role="button" class="btn btn-outline-light">Get Started</a>
+                <a href="LearnMore.html" id="learn" role="button" class="btn btn-outline-light">Learn
+                        More</a>
             </div>
+
         </div>
     </div>
+    <br>
     <div id="section2">
         <div id="results" class="card">
             <div class="card-body">
-                    <h5 class="card-title">Click 'Get Location' To Start Relaxing</h5>
                 <div>
-                    <span><button id="getLocation" type="submit" class="btn btn-dark">Get Location</button></span>
-                    <span><button id="review" type="submit" class="btn btn-dark">Reviews</button></span>
-                </div>
+                    <button id="getLocation" type="submit" class="btn btn-dark">Get
+                            Location</button>
+                    <button id="review" type="submit" class="btn btn-dark">Reviews</button>
+              
 
                 <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
-                    Get a DD! </button>
-
+                    Get a DD!
+                </button>
+            </div>
+                <br>
+                <div id="bar"></div>
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -83,15 +77,19 @@
 
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No Thanks!</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No
+                                    Thanks!</button>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     <!--age verifcation modal-->
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
