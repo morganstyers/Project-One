@@ -1,16 +1,16 @@
 
 .jumbotron{
+    
     text-align: center;
     display: block;
     margin: auto;
-     
+    padding-top: 10px;
+         
 }
 
 html {
     scroll-behavior: smooth;
   }
-
-
 
 .title{
     font-size: 90px;
@@ -164,7 +164,35 @@ p{
     font-family: 'Permanent Marker', cursive;
 }
 
-#peruse{
+#peruse, h5{
     font-family: 'Permanent Marker', cursive; 
 }
 
+#learnMoreJT{
+    background-color: #e9aa1815;
+    z-index: 2;
+    color: rgb(255, 255, 255); 
+    position: relative;
+}
+
+.card-deck{
+    
+    z-index: 2;
+    position: relative;
+    height: 200px;
+ 
+}
+.card-body{
+
+    
+    font-family: 'Karla', sans-serif;
+    
+    
+}
+
+img{
+    height: 100px;
+    width: 100px; 
+    margin-left:35%;
+    display: flex;
+}
