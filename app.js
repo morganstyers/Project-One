@@ -86,14 +86,14 @@ $("#getLocation").on("click", function getLocation() {
             name: name,
             address: address,
             phone: phone,
-            website: website.link(website),
+            website: website.link("https://" + website),
         }; 
         console.log("Address: " + breweryData.address);
         console.log(breweryData.name);
         console.log(breweryData.phone);
         console.log(breweryData);
 
-        var newDiv = $("<div>");
+        var newDiv = $("<div class='response'>");
         var newUl = $("<ul>");
         var newLi = $("<li>").html(breweryData.name + "<br>" + breweryData.address + "<br>" + breweryData.phone + "<br>" + breweryData.website);
         
