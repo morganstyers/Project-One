@@ -8,7 +8,7 @@ function beerRise() {
     $('.head').addClass('active');
   }
 
-  function pourBeer() {
+    function pourBeer() {
     $('.pour').addClass('pouring');
     beerRise();
     setTimeout(function() {
@@ -20,6 +20,8 @@ function beerRise() {
   setTimeout(function() {
     pourBeer();
   }, 3000)
+
+
 $("#search").on("click", function () {
     event.preventDefault();
     
@@ -74,23 +76,32 @@ $("#getLocation").on("click", function getLocation() {
         var name = response.results[i].poi.name;
         var address = response.results[i].address.freeformAddress;
         var phone = response.results[i].poi.phone;
-
-        if (phone === null || phone === undefined) {
+        var website = response.results[i].poi.url;
+        var city = response.results[i].address.municipality;
+        var state = response.results[i].address.countrySubdivision;
+        
+        if (phone === null || phone === undefined || website === null || website === undefined) {
             phone = "";
+            website = "";
+        } else if (!website.includes("https://")){
+            website = "https://" + website
         }
+
         var breweryData = {
             name: name,
             address: address,
             phone: phone,
+            website: website.link(website),
         }; 
         console.log("Address: " + breweryData.address);
         console.log(breweryData.name);
         console.log(breweryData.phone);
         console.log(breweryData);
-
-        var newDiv = $("<div>");
+        // console.log(city);
+        // console.log(state);
+        var newDiv = $("<div class='response'>");
         var newUl = $("<ul>");
-        var newLi = $("<li>").html(breweryData.name + "<br>" + breweryData.address + "<br>" + breweryData.phone);
+        var newLi = $("<li>").html(breweryData.name + "<br>" + breweryData.address + "<br>" + breweryData.phone + "<br>" + breweryData.website);
         
         // newLi.html(name);
         // newLi.html(address);
@@ -100,10 +111,11 @@ $("#getLocation").on("click", function getLocation() {
         newDiv.append(newUl);
 
         $(".card-body").append(newDiv)
-        }
+    }
 
 
 })
+
 $("getLocation").on('click', function(){
     $("#MyModal").modal();
 })
