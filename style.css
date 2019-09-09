@@ -180,14 +180,21 @@ p{
     z-index: 2;
     position: relative;
     height: 200px;
+    width: 1200px;
+    margin: auto; 
  
 }
 .card-body{
-
     
     font-family: 'Karla', sans-serif;
     
-    
+}
+
+.card{
+    background-color: #e9aa1815;
+    color: rgb(255, 255, 255); 
+    border-color: rgba(255, 255, 255, 0);
+
 }
 
 img{
