@@ -156,10 +156,6 @@ p{
     font-family: 'Karla', sans-serif;
 }
 
-.navbar{
-    font-family: 'Permanent Marker', cursive;
-}
-
 #peruse, h5{
     font-family: 'Permanent Marker', cursive; 
 }
@@ -173,8 +169,6 @@ p{
 .people{
 margin: auto;
 text-align: center;
-
-
 }
 #learnMoreJT{
     background-color: #e9aa1815;
