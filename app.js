@@ -1,9 +1,8 @@
 console.log("linked")
 
 $(document).ready(function() {
-    
- 
-
+  
+    //beer animation for home page
 function beerRise() {
     $('.beer').addClass('fill');
     $('.head').addClass('active');
@@ -45,14 +44,17 @@ $("#search").on("click", function () {
       bottom: '200px'
       }, 2500);
   });
-    
+});  
+
+//end beer animation
+//start js 
   
 $("#getLocation").on("click", function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
     } else { 
    }
-  })
+  });
   
   function showPosition(position) {
     var latCoord = position.coords.latitude; 
@@ -105,17 +107,4 @@ $("#getLocation").on("click", function getLocation() {
 $("getLocation").on('click', function(){
     $("#MyModal").modal();
 })
-});
-
-           
-
-    });
-
-
-}
-
-
-
-
-
-
+};
