@@ -1,49 +1,150 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
-        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
-        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/393d5a4505.js"></script>
-    <title>Peruse For Brews||Learn More</title>
-</head>
-<body>
-              <div class="jumbotron jumbotron-fluid bg-dark text-white">
-                    <div class="container">
-                      <h1 class="title">Beer Me</h1>
-                      <p class="lead">This app was made by five cicerones based in Charlotte, NC tyring to figure out how to code while dreaming of self medicating post class over a brewskey.
-                         Allow the app to use your location to reveal the five closest breweries you. Go out, chug responsibly, make strangers friends, tip the bartender, and grab a uber. Safe home.</p>
-                    </div>  
-                    <div class="container">
-                        <div class="row">
-                                          <span><a href="index.html" id="peruse" role="button"
-                                    class="btn btn-outline-light" class="mx-auto">back to brews</a></span>
-                                    </div>
-                    </div>                
-                  </div>
 
-                  <div class= "people">
-                      <h3>Recomendations in the Charlotte, NC area:</h3>
-                      <li>Pat (favors lagers): The Good Bottle Company</li>
-                      <li>Morgan (favors wheats): Resident Culture</li>
-                      <li>Nick (favors wheats): Cabarrus County Brewery</li>
-                      <li>Madison (favors stouts and sours): Bold Missy</li>
-                      <li>Carlo (lame ass mf who doesnt drink but kinda likes IPAs): anywhere, it's an IPA kind of town</li>
-                  </div>
-                  
-    <script src="app.js"></script>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="./bubbleAnimations/bubbles.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+    integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+    integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/393d5a4505.js"></script>
+  <title>Peruse For Brews||Learn More</title>
+</head>
+
+<body>
+  <div id="learnMoreJT" class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="title">Beer Me</h1>
+      <p class="lead">This app was made by five cicerones based in Charlotte, NC tyring to figure out how to code while
+        dreaming of self medicating post class over a brewskey.
+        Allow the app to use your location to reveal the five closest breweries you. Go out, chug responsibly, make
+        strangers friends, tip the bartender, and grab a uber. Safe home.</p>
+    </div>
+    <div class="container">
+      <div class="row">
+        <span><a href="index.html" id="peruse" role="button" class="btn btn-outline-light" class="mx-auto">back to
+            brews</a></span>
+      </div>
+    </div>
+  </div>
+  <ul class="bubbles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <div class="card-deck">
+    <div class="card">
+      <img src="
+      https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/294453_270616183054820_1915216540_n.jpg?_nc_cat=105&_nc_oc=AQm_OiaKGH4VobkVKjZdNGPhrklxt1isSvtpo3hpja5BvBC_0UWxAHeuDhgLgFpOcMWVusstnwLmw-DmEiR8P2fr&_nc_ht=scontent-iad3-1.xx&oh=1730c2acc5e1b5e1a4844808fba725f4&oe=5DC96BD1"
+      class="rounded-circle"  alt="...">
+      <div class="card-img-overlay">
+        <h5 class="card-title">Pat</h5>
+        <p class="card-text">Type: Lover of Lagers.<br> Recomends: The Good Bottle Company</p>
+      </div>
+    </div>
+    <div class="card">
+      <img
+        src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/33729390_2143062225925342_4145944880155197440_n.jpg?_nc_cat=107&_nc_oc=AQk9c0QMHjvPyaPt2yreK6PQBHU-SiFnKQKlOY6aEFOpalzOeuqI4Ws6dpv8iq7wgRTdHAMkK4uI4CxzGRvDQGyY&_nc_ht=scontent-iad3-1.xx&oh=53c50f1c77311755f00386f6d237c8ec&oe=5DFDD336"
+        class="rounded-circle"  alt="...">
+        <div class="card-img-overlay">
+        <h5 class="card-title">Morgan</h5>
+        <p class="card-text">Type: Drink your Wheaties.<br> Recomends: Resident Culture</p>
+      </div>
+    </div>
+    <div class="card">
+      <img
+        src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/1453355_472702116271235_427941930228698884_n.jpg?_nc_cat=100&_nc_oc=AQmkYbBJMTreo3weHunfIGNGneZu-lfvXc-O2ipyBUAaQC2lUg72EEZRpsfe6tgFxe3fD6sw67suwmTQLxLhc0E7&_nc_ht=scontent-iad3-1.xx&oh=29337df9cd1bbdeef88731e487b05dce&oe=5E09EC40"
+        class="rounded-circle" alt="...">
+        <div class="card-img-overlay">
+        <h5 class="card-title">Nick</h5>
+        <p class="card-text">Type: Drink your Wheaties part 2.<br> Recomends: Cabarrus Brewing Co</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="
+      https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/13533282_1073574106063424_5040701104773278568_n.jpg?_nc_cat=105&_nc_oc=AQk_vN9y4P6j2rwaAZx676HYvSpixz-YdWlHPJ62MX7oGNRlSyVSclT0b9-m-3mAiEugllIOWgy9jwCH0StHR6yz&_nc_ht=scontent-iad3-1.xx&oh=243ece4f3d61c2445b42f9d97e2da91c&oe=5E0A3DB1"
+      class="rounded-circle" alt="...">
+      <div class="card-img-overlay">
+        <h5 class="card-title">Madison</h5>
+        <p class="card-text">Type: The Black Stuff and the sour stuff.<br> Recomends: Bold Missy</p>
+
+      </div>
+    </div>
+    <div class="card">
+      <img
+        src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/19601067_875930079241513_4129494452664089995_n.jpg?_nc_cat=107&_nc_oc=AQk6vhjOVYralsvSEY1gU-bpob24_W3ZyyJ6vvv84Z1gHVhtLlYRKo_MnKrOjHZrnB74ZOQPPQ7VYQAAF5z6M00Q&_nc_ht=scontent-iad3-1.xx&oh=a177348445b15c9b247a8ed7160870ce&oe=5E0488E2"
+        class="rounded-circle"alt="...">
+        <div class="card-img-overlay">
+        <h5 class="card-title">Carlo</h5>
+        <p class="card-text">Type: lame ass mf who doesnt drink but kinda likes IPAs.<br> Recomends: any brewery, it's
+          an IPA kind of town, but "I've been to Sycamore'"</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="app.js"></script>
 </body>
+
 </html>
