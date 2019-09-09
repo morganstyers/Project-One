@@ -141,7 +141,7 @@ i{
     margin: auto; 
 }
 
-button{
+button, #start {
     font-family: 'Permanent Marker', cursive;
 }
 
