@@ -3,16 +3,6 @@ console.log("linked")
 
 $("#search").on("click", function () {
     event.preventDefault();
-<<<<<<< Updated upstream
-=======
-    var city = "charlotte"//$("#city-input");
-    var state = "north_carolina"//$("#state-input");
-
-
-
-    var city = "charlotte"//$("#city-input");
-    var state = "north_carolina"//$("#state-input");
->>>>>>> Stashed changes
 
     var city = $("#city-input");
     var state =$("#state-input");
@@ -33,7 +23,6 @@ $.ajax({
        if (results[i].longitude === null || results[i].longitude === "") {
            i++
        } else {
-<<<<<<< Updated upstream
             longAnswer.push(results[0].longitude)
             latAnswer.push(results[0].latitude) 
        }
@@ -44,16 +33,6 @@ $.ajax({
     //console.log(results[i].longitude)
     console.log("long answer" + longAnswer[0])
     console.log("lat answer" + latAnswer[0])
-=======
-            answer.push(results[i].longitude)
-            answer.push(results[i].latitude)
-       }
-       //console.log(results[i].longitude)
-    
-        // 
-    }
-    console.log("Answer: " + latAnswer)
->>>>>>> Stashed changes
 })
 
 });

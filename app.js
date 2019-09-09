@@ -1,4 +1,4 @@
-console.log("linked")
+$(document).ready(function () {
 
 $(document).ready(function () {
   $("#section2").hide()
@@ -92,6 +92,7 @@ $(document).ready(function () {
 
           $(".card-body").append(newDiv)
         }
+        
 
       })
 
