@@ -1,9 +1,8 @@
 body{
     background-color: #e9ab18;
     z-index: 1;
-    overflow: hidden;
     overflow-x: hidden;
-}
+    }
 
 
 .bubbles {
@@ -68,7 +67,6 @@ body{
     border-radius: 50%;
     display: inline-block;
     left: 55%; 
-    animation-delay: 1s;
     animation-duration: 20s;
   }
   .bubbles li:nth-child(5){
@@ -102,7 +100,7 @@ body{
       border-radius: 50%;
       display: inline-block;
       left: 48%; 
-      animation-delay: 2s;
+      animation-delay: 1s;
       animation-duration: 10s;
     }
     .bubbles li:nth-child(8){
@@ -124,7 +122,6 @@ body{
       border-radius: 50%;
       display: inline-block;
       left: 98%; 
-      animation-delay: 1s;
       animation-duration: 20s;
     }
     .bubbles li:nth-child(10){
@@ -192,7 +189,7 @@ body{
           border-radius: 50%;
           display: inline-block;
           left: 32%; 
-          animation-delay: 6s;
+          animation-delay: 1s;
           animation-duration: 17s;
         }
         .bubbles li:nth-child(16){
