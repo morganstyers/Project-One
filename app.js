@@ -68,21 +68,10 @@ $(document).ready(function () {
 
         $(".card-text").append(newDiv)
 
-/*         var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + name + "&limit=25"
-        console.log(queryurl)
-        $.ajax({
-            url: queryurl,
-            method: "GET",
-            "headers": {
-                "Authorization": "Bearer 9EO74UpComrdvt4WzJLX9S6xhIZHAqqNiB4T6PaJBGWkMOKiVrGrJDBX7RHZx60BUzK2VrVgcL42klLPExym9hxFz5aYqpjfB0UJj3DLMWpRkhBuVXa4OtJ9dMN2XXY"
-            }
-        })
-            .then(function (response) {
-                console.log(response)
-            });
-         */
+        console.log("logging brewery " + name);
 
-        var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + name + "&limit=25"
+
+     /*    var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/matches?name=" + name + "&address1=" + address + "&city=charlotte" + "&state=NC" + "&country=US"
         console.log(queryurl)
         $.ajax({
             url: queryurl,
@@ -94,22 +83,51 @@ $(document).ready(function () {
             .then(function (response) {
                 console.log(response);
                 console.log(response.businesses.length);
-            });
+            }); */
+
+            var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/matches?name=" + name + "&address1=" + address + "&city=charlotte" + "&state=NC" + "&country=US"
+            console.log(queryurl)
+            $.ajax({
+                url: queryurl,
+                method: "GET",
+                "headers": {
+                    "Authorization": "Bearer 9EO74UpComrdvt4WzJLX9S6xhIZHAqqNiB4T6PaJBGWkMOKiVrGrJDBX7RHZx60BUzK2VrVgcL42klLPExym9hxFz5aYqpjfB0UJj3DLMWpRkhBuVXa4OtJ9dMN2XXYx",
+                }
+            })
+                .then(function (response) {
+                    console.log(response);
+                    console.log(response.businesses.length);
+                    for (var i =0; i < response.businesses.length; i++) {
+                      var id = response.businesses[i].id
+                      console.log("yelp id" + id)
+
+                      var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/" + id + "/reviews"
+                      console.log(queryurl)
+                      $.ajax({
+                          url: queryurl,
+                          method: "GET",
+                          "headers": {
+                              "Authorization": "Bearer 9EO74UpComrdvt4WzJLX9S6xhIZHAqqNiB4T6PaJBGWkMOKiVrGrJDBX7RHZx60BUzK2VrVgcL42klLPExym9hxFz5aYqpjfB0UJj3DLMWpRkhBuVXa4OtJ9dMN2XXYx",
+                          }
+                      })
+                          .then(function (response) {
+                              console.log(response);
+      
+      
+        
+                          });
+                    }
+                });
+
+
+
+        
         }
         
 
       });
     
-/*     var queryurl = "http://beermapping.com/webservice/locquery/1fa557925657b372c844342cf9a40f37/" + name
-     console.log(queryurl) 
-     $.ajax({ 
-       url: queryurl, 
-       method: "GET", 
-       })
-      .then(function (response) { 
-        console.log(response)
-      }); */
-    
+
   
   
 };
