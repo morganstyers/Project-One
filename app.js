@@ -5,12 +5,19 @@ the document is loaded. Whatever code you write inside the
 $(document ).ready() method will run once the page DOM is ready to 
 execute JavaScript code.(src= jquery docu webstie)*/
 
+
 $(document).ready(function () {
 
 //Morgan: added the section scrolling function back
 $("#section2").hide()
 
   function beerRise() {
+
+$(document).ready(function() {
+  
+    //beer animation for home page
+function beerRise() {
+
     $('.beer').addClass('fill');
     $('.head').addClass('active');
   }
@@ -43,6 +50,7 @@ $("#section2").hide()
         height: '170px'
       }, 2500);
 
+
     $('.beer-foam')
       .delay(3400)
       .animate({
@@ -63,6 +71,21 @@ $("#section2").hide()
     } else {
     }
   })
+
+
+  });
+});  
+
+//end beer animation
+//start js 
+  
+$("#getLocation").on("click", function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+   }
+  });
+  
 
   function showPosition(position) {
     var latCoord = position.coords.latitude;
@@ -100,13 +123,14 @@ $("#section2").hide()
           var newUl = $("<ul>");
           var newLi = $("<li>").html(breweryData.name + "<br>" + breweryData.address + "<br>" + breweryData.phone);
 
+
           // newLi.html(name);
           // newLi.html(address);
           // newLi.html(phone);
 
           newUl.append(newLi);
           newDiv.append(newUl);
-
+          //MORGAN:appended so the results show up not crammed into buttons
           $('#bar').append(newDiv)
         }
 
@@ -124,4 +148,11 @@ $("#section2").hide()
 
 
 
+
+=======
+})
+$("getLocation").on('click', function(){
+    $("#MyModal").modal();
+})
+};
 
