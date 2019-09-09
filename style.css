@@ -166,4 +166,15 @@ p{
 #peruse{
     font-family: 'Permanent Marker', cursive; 
 }
+#section2{
+  text-align: center;
+}
+#learnMore{
+  align-items: center;
+  display: block;
+}
+.people{
+margin: auto;
+text-align: center;
 
+}

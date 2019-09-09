@@ -1,8 +1,14 @@
 console.log("linked")
+/*Morgan: document.ready() needs to encompass whole body. 
+The ready() method is used to make a function available after 
+the document is loaded. Whatever code you write inside the 
+$(document ).ready() method will run once the page DOM is ready to 
+execute JavaScript code.(src= jquery docu webstie)*/
 
 $(document).ready(function () {
 
-
+//Morgan: added the section scrolling function back
+$("#section2").hide()
 
   function beerRise() {
     $('.beer').addClass('fill');
@@ -21,11 +27,9 @@ $(document).ready(function () {
   setTimeout(function () {
     pourBeer();
   }, 1700)
-  $("#search").on("click", function () {
-    event.preventDefault();
 
 
-    $('.pour') //Pour Me Another Drink, Bartender!
+    $('.pour')
       .delay(2000)
       .animate({
         height: '360px'
@@ -44,10 +48,14 @@ $(document).ready(function () {
       .animate({
         bottom: '200px'
       }, 2500);
-  });
 
+//Morgan: added the section scrolling function back
 
-});
+  $("#start").on("click", function() {
+
+    $("#section2").show();
+
+  })
 
   $("#getLocation").on("click", function getLocation() {
     if (navigator.geolocation) {
@@ -99,7 +107,7 @@ $(document).ready(function () {
           newUl.append(newLi);
           newDiv.append(newUl);
 
-          $(".card-body").append(newDiv)
+          $('#bar').append(newDiv)
         }
 
 
@@ -109,7 +117,7 @@ $(document).ready(function () {
     })
   };
 
-
+});
 
 
 
