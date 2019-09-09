@@ -77,22 +77,28 @@ $("#getLocation").on("click", function getLocation() {
         var address = response.results[i].address.freeformAddress;
         var phone = response.results[i].poi.phone;
         var website = response.results[i].poi.url;
-
+        var city = response.results[i].address.municipality;
+        var state = response.results[i].address.countrySubdivision;
+        
         if (phone === null || phone === undefined || website === null || website === undefined) {
             phone = "";
             website = "";
+        } else if (!website.includes("https://")){
+            website = "https://" + website
         }
+
         var breweryData = {
             name: name,
             address: address,
             phone: phone,
-            website: website.link("https://" + website),
+            website: website.link(website),
         }; 
         console.log("Address: " + breweryData.address);
         console.log(breweryData.name);
         console.log(breweryData.phone);
         console.log(breweryData);
-
+        // console.log(city);
+        // console.log(state);
         var newDiv = $("<div class='response'>");
         var newUl = $("<ul>");
         var newLi = $("<li>").html(breweryData.name + "<br>" + breweryData.address + "<br>" + breweryData.phone + "<br>" + breweryData.website);
