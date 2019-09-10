@@ -1,7 +1,10 @@
 console.log("linked")
+$("#section2").hide();
+$("#start").on("click", function () {
+  $("#section2").show()
+});
 
 $(document).ready(function () {
-  $("#section2").hide()
   //beer animation for home page
   function beerRise() {
     $('.beer').addClass('fill');
@@ -16,17 +19,9 @@ $(document).ready(function () {
     }, 1500);
   }
 
-
   setTimeout(function () {
     pourBeer();
-  }, 3000)
-
-  $("#start").on("click", function () {
-    $("#section2").show()
-
-  });
-
-
+  }, 2000)
 
   //end beer animation
   //start js 
@@ -96,7 +91,7 @@ $(document).ready(function () {
       })
 
     $("getLocation").on('click', function () {
-      $("#MyModal").modal();
+      
     })
   }
 });
