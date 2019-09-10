@@ -181,3 +181,6 @@ img{
     display: flex;
 }
 
+.response > li {
+  list-style-type: none;
+}
