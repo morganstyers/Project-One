@@ -1,8 +1,10 @@
+
 console.log("linked")
 $("#section2").hide();
 $("#start").on("click", function () {
   $("#section2").show()
 });
+
 
 $(document).ready(function () {
   //beer animation for home page
@@ -47,13 +49,78 @@ $(document).ready(function () {
       .then(function (response) {
         // put into html
         for (var i = 0; i < response.results.length; i++) {
-
           var name = response.results[i].poi.name;
           var address = response.results[i].address.freeformAddress;
           var phone = response.results[i].poi.phone;
           var website = response.results[i].poi.url;
           var city = response.results[i].address.municipality;
           var state = response.results[i].address.countrySubdivision;
+
+        console.log(address);
+        console.log(name);
+        console.log(phone);
+
+        var newDiv = $("<div>");
+        var newUl = $("<ul>");
+        var newLi = $("<li>");
+
+        newLi.html(address, name, phone);
+        newUl.append(newLi);
+        newDiv.append(newUl);
+
+        $(".card-text").append(newDiv)
+
+        console.log("logging brewery " + name);
+
+
+     /*    var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/matches?name=" + name + "&address1=" + address + "&city=charlotte" + "&state=NC" + "&country=US"
+        console.log(queryurl)
+        $.ajax({
+            url: queryurl,
+            method: "GET",
+            "headers": {
+                "Authorization": "Bearer 9EO74UpComrdvt4WzJLX9S6xhIZHAqqNiB4T6PaJBGWkMOKiVrGrJDBX7RHZx60BUzK2VrVgcL42klLPExym9hxFz5aYqpjfB0UJj3DLMWpRkhBuVXa4OtJ9dMN2XXYx",
+            }
+        })
+            .then(function (response) {
+                console.log(response);
+                console.log(response.businesses.length);
+            }); */
+
+            var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/matches?name=" + name + "&address1=" + address + "&city=charlotte" + "&state=NC" + "&country=US"
+            console.log(queryurl)
+            $.ajax({
+                url: queryurl,
+                method: "GET",
+                "headers": {
+                    "Authorization": "Bearer 9EO74UpComrdvt4WzJLX9S6xhIZHAqqNiB4T6PaJBGWkMOKiVrGrJDBX7RHZx60BUzK2VrVgcL42klLPExym9hxFz5aYqpjfB0UJj3DLMWpRkhBuVXa4OtJ9dMN2XXYx",
+                }
+            })
+                .then(function (response) {
+                    console.log(response);
+                    console.log(response.businesses.length);
+                    for (var i =0; i < response.businesses.length; i++) {
+                      var id = response.businesses[i].id
+                      console.log("yelp id" + id)
+
+                      var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/" + id + "/reviews"
+                      console.log(queryurl)
+                      $.ajax({
+                          url: queryurl,
+                          method: "GET",
+                          "headers": {
+                              "Authorization": "Bearer 9EO74UpComrdvt4WzJLX9S6xhIZHAqqNiB4T6PaJBGWkMOKiVrGrJDBX7RHZx60BUzK2VrVgcL42klLPExym9hxFz5aYqpjfB0UJj3DLMWpRkhBuVXa4OtJ9dMN2XXYx",
+                          }
+                      })
+                          .then(function (response) {
+                              console.log(response);
+                              var reviewUrl = response.reviews[0].url;
+                              console.log("Yelp URL " + reviewUrl);
+                              
+        
+                          });
+                    }
+                });
 
           if (phone === null || phone === undefined || website === null || website === undefined) {
             phone = "";
@@ -87,11 +154,10 @@ $(document).ready(function () {
 
           $(".card-body").append(newDiv)
         }
-
-      })
+      });
+  };
 
     $("getLocation").on('click', function () {
       
     })
-  }
 });
