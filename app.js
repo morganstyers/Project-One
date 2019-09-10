@@ -61,17 +61,7 @@ $(document).ready(function () {
         console.log(name);
         console.log(phone);
 
-        var newDiv = $("<div>");
-        var newUl = $("<ul>");
-        var newLi = $("<li>");
-
-        newLi.html(address, name, phone);
-        newUl.append(newLi);
-        newDiv.append(newUl);
-
-        $(".card-text").append(newDiv)
-
-        console.log("logging brewery " + name);
+    
 
 
      /*    var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/matches?name=" + name + "&address1=" + address + "&city=charlotte" + "&state=NC" + "&country=US"
