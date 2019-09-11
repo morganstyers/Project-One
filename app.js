@@ -104,27 +104,6 @@ $(document).ready(function () {
                     
                     console.log(response);
                     // for (var i = 0; i < response.reviews.length; i++) {
-<<<<<<< HEAD
-                      reviewUrl = response.reviews[0].url;
-                      console.log("Yelp URL " + reviewUrl);
-
-                      $("#review").on('click', function () {
-                        $(".response").hide();
-                        $(".review").show();
-
-                      });
-                      var reviewLink = reviewUrl.link(reviewUrl)
-                      var reviewDiv = $("<div class=review>");
-                      var reviewUl = $("<ul>");
-                      var reviewLi = $("<li>").html(name + "<br>" + reviewLink);
-                      console.log(reviewUrl + "review")
-            
-                      reviewUl.append(reviewLi);
-                      reviewDiv.append(reviewUl);
-            
-                      $(".card-body").append(reviewDiv)
-            
-=======
                     reviewUrl = response.reviews[0].url;
                     console.log("Yelp URL " + reviewUrl);
 
@@ -137,14 +116,13 @@ $(document).ready(function () {
                     var reviewLink = reviewUrl.link(reviewUrl)
                     var reviewDiv = $("<div class=review>");
                     var reviewUl = $("<ul>");
-                    var reviewLi = $("<li>").html(name + "<br>" +reviewLink);
+                    var reviewLi = $("<li>").html(reviewLink);
                     console.log(reviewUrl + "review")
 
                     reviewUl.append(reviewLi);
                     reviewDiv.append(reviewUl);
 
                     $("#r").append(reviewDiv)
->>>>>>> 827e9304e7fc3a7eacfdff85f21336b1a8aa3a08
 
                   });
 
@@ -185,18 +163,8 @@ $(document).ready(function () {
           newUl.append(newLi);
           newDiv.append(newUl);
 
-<<<<<<< HEAD
-          $(".card-body").append(newDiv)
-
-
-        }
-      });
-    }
-  });
-=======
           $("#r").append(newDiv);
         }
       });
   }
 });
->>>>>>> 827e9304e7fc3a7eacfdff85f21336b1a8aa3a08
