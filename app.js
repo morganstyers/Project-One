@@ -4,6 +4,11 @@ console.log("linked")
 $(document).ready(function () {
   var reviewUrl = ""
 
+  //end beer animation
+  //start js 
+
+  var reviewUrl = ""
+
   $("#getLocation").on("click", function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
