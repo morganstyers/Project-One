@@ -3,7 +3,6 @@ console.log("linked")
 
 $("#search").on("click", function () {
     event.preventDefault();
-<<<<<<< HEAD
     var city = "charlotte"//$("#city-input");
     var state = "north_carolina"//$("#state-input");
 
@@ -11,8 +10,6 @@ $("#search").on("click", function () {
 
     var city = "charlotte"//$("#city-input");
     var state = "north_carolina"//$("#state-input");
-=======
->>>>>>> c1dfe8e0908a5c387c59808680f2dc986c766dba
 
     var city = $("#city-input");
     var state =$("#state-input");
@@ -33,7 +30,6 @@ $.ajax({
        if (results[i].longitude === null || results[i].longitude === "") {
            i++
        } else {
-<<<<<<< HEAD
             answer.push(results[i].longitude)
             answer.push(results[i].latitude)
        }
@@ -42,18 +38,6 @@ $.ajax({
         // 
     }
     console.log("Answer: " + latAnswer)
-=======
-            longAnswer.push(results[0].longitude)
-            latAnswer.push(results[0].latitude) 
-       }
-     
-
-    
-    }
-    //console.log(results[i].longitude)
-    console.log("long answer" + longAnswer[0])
-    console.log("lat answer" + latAnswer[0])
->>>>>>> c1dfe8e0908a5c387c59808680f2dc986c766dba
 })
 
 });

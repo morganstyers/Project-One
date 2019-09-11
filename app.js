@@ -1,13 +1,18 @@
 
 console.log("linked")
-$("#section2").hide();
-$("#start").on("click", function () {
-  $("#section2").show()
-});
-
 
 $(document).ready(function () {
-  //beer animation for home page
+  $("#section2").hide();
+
+  $("#start").on("click", function () {
+    $("#section2").show()
+    $("#section1").hide()
+  });
+
+  $("#back").on('click', function () {
+    $("#section2").hide()
+  })
+  
   function beerRise() {
     $('.beer').addClass('fill');
     $('.head').addClass('active');
@@ -24,9 +29,6 @@ $(document).ready(function () {
   setTimeout(function () {
     pourBeer();
   }, 2000)
-
-  //end beer animation
-  //start js 
 
   $("#getLocation").on("click", function getLocation() {
     if (navigator.geolocation) {
@@ -55,6 +57,38 @@ $(document).ready(function () {
           var website = response.results[i].poi.url;
           var city = response.results[i].address.municipality;
           var state = response.results[i].address.countrySubdivision;
+
+
+          console.log(address);
+          console.log(name);
+          console.log(phone);
+
+          var newDiv = $("<div>");
+          var newUl = $("<ul>");
+          var newLi = $("<li>");
+
+          newLi.html(address, name, phone);
+          newUl.append(newLi);
+          newDiv.append(newUl);
+
+          $(".card-text").append(newDiv)
+
+          console.log("logging brewery " + name);
+
+
+          /*    var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/matches?name=" + name + "&address1=" + address + "&city=charlotte" + "&state=NC" + "&country=US"
+             console.log(queryurl)
+             $.ajax({
+                 url: queryurl,
+                 method: "GET",
+                 "headers": {
+                     "Authorization": "Bearer 9EO74UpComrdvt4WzJLX9S6xhIZHAqqNiB4T6PaJBGWkMOKiVrGrJDBX7RHZx60BUzK2VrVgcL42klLPExym9hxFz5aYqpjfB0UJj3DLMWpRkhBuVXa4OtJ9dMN2XXYx",
+                 }
+             })
+                 .then(function (response) {
+                     console.log(response);
+                     console.log(response.businesses.length);
+                 }); */
 
           console.log(response);
           console.log(address);
@@ -91,6 +125,14 @@ $(document).ready(function () {
                 })
                   .then(function (response) {
                     console.log(response);
+
+                    var reviewUrl = response.reviews[0].url;
+                    console.log("Yelp URL " + reviewUrl);
+
+
+                  });
+              }
+
                     for (var i = 0; i < response.reviews.length; i++) {
                       var reviewUrl = response.reviews[i].url;
                       console.log("Yelp URL " + reviewUrl);
@@ -105,6 +147,7 @@ $(document).ready(function () {
                    }
                   });
              }
+
             });
 
           if (phone === null || phone === undefined || website === null || website === undefined) {
@@ -150,6 +193,4 @@ $(document).ready(function () {
         }
       });
   };
-
-
 });
