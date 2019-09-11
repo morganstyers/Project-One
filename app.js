@@ -2,33 +2,7 @@
 console.log("linked")
 
 $(document).ready(function () {
-  $("#section2").hide();
-
-  $("#start").on("click", function () {
-    $("#section2").show()
-    $("#section1").hide()
-  });
-
-  $("#back").on('click', function () {
-    $("#section2").hide()
-  })
-  
-  function beerRise() {
-    $('.beer').addClass('fill');
-    $('.head').addClass('active');
-  }
-
-  function pourBeer() {
-    $('.pour').addClass('pouring');
-    beerRise();
-    setTimeout(function () {
-      $('.pour').addClass('end');
-    }, 1500);
-  }
-
-  setTimeout(function () {
-    pourBeer();
-  }, 2000)
+  var reviewUrl = ""
 
   //end beer animation
   //start js 
