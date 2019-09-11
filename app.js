@@ -150,7 +150,7 @@ $(document).ready(function () {
             
                       $(".card-body").append(reviewDiv)
             
-                    
+
                   });
 
                   
@@ -190,12 +190,10 @@ $(document).ready(function () {
           newUl.append(newLi);
           newDiv.append(newUl);
 
-          $(".card-body").append(newDiv);
+          $(".card-body").append(newDiv)
 
 
         }
-
-
       });
     }
-    });
+  });
