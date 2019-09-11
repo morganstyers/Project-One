@@ -30,14 +30,11 @@ $(document).ready(function () {
     pourBeer();
   }, 2000)
 
-<<<<<<< HEAD
   //end beer animation
   //start js 
 
   var reviewUrl = ""
 
-=======
->>>>>>> 7ea1185c73cb019a31a02f525ae1724f26e33af6
   $("#getLocation").on("click", function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
@@ -153,7 +150,7 @@ $(document).ready(function () {
             
                       $(".card-body").append(reviewDiv)
             
-
+                    
                   });
 
                   
@@ -193,9 +190,12 @@ $(document).ready(function () {
           newUl.append(newLi);
           newDiv.append(newUl);
 
-          $(".card-body").append(newDiv)
+          $(".card-body").append(newDiv);
 
 
         }
-      });
 
+
+      });
+    }
+    });
