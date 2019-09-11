@@ -193,5 +193,4 @@ $(document).ready(function () {
 
         }
       });
-  };
-});
+
