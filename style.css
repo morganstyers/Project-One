@@ -130,21 +130,22 @@ h3{
     margin-left: 43%; 
 }
 
-button{
+button, a{
     font-family: 'Permanent Marker', cursive;
 }
 ul{
   list-style:none;
 }
-p,#lead, #learn, .card-body{
+p,#lead, .card-body{
     font-family: 'Karla', sans-serif;
+
 }
 
 #results{
-  background-color:white;
+  background-color: #fff;
   color: black;
-}
 
+}
 
 #section2{
   text-align: center;
