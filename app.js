@@ -1,13 +1,17 @@
 
 console.log("linked")
+
 $("#section2").hide();
 $("#start").on("click", function () {
   $("#section2").show()
+ 
 });
 
 
 $(document).ready(function () {
   //beer animation for home page
+ 
+
   function beerRise() {
     $('.beer').addClass('fill');
     $('.head').addClass('active');
@@ -156,6 +160,7 @@ $(document).ready(function () {
         }
       });
   };
+
 
     $("getLocation").on('click', function () {
       

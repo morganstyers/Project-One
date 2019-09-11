@@ -7,10 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Puruse For Brews</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fb7708a265.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -47,47 +50,39 @@
     <br>
 
     <div id="section2">
-
         <div id="results" class="card">
             <div class="card-body">
                 <div>
                     <button id="getLocation" type="submit" class="btn btn-dark">Get
                         Location</button>
                     <button id="review" type="submit" class="btn btn-dark">Reviews</button>
-
-
-                    <button id="car" type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal">
-                        <i class='fas fa-car'> </i>
-                    </button>
+                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal">
+                        <i class='fas fa-car fa-lg'></i>
+                      </button>
                 </div>
                 <br>
-                <div id="myModal">
-                    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Cruise For Brews</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <i class="fab fa-uber" style="font-size: 80px;" href="" class="card-link"
-                                        class="card-img-top" alt="..."></i>
-                                    <p>Uber</p>
-                                    <i class="fas fa-paw"></i>
-
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No
-                                        Thanks!</button>
-
-                                </div>
-                            </div>
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myModal">Cruise For Brews</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
+                        <div class="modal-body">
+                            <i class="fab fa-uber" style="font-size: 80px;" href="" class="card-link"
+                                class="card-img-top" alt="..."></i>
+                            <p>Uber</p>
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No
+                                Thanks!</button>
+                        </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
             </div>
 
         </div>

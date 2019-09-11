@@ -4,7 +4,7 @@
     text-align: center;
     display: block;
     margin: auto;
-    padding-top: 10px;     
+    padding-top: 45px;     
 }
 
 html {
@@ -24,6 +24,7 @@ h3{
   }
 
 #section2 {
+ margin-top: 55px;
         height: 600px;}
 
  #container {
