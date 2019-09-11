@@ -9,8 +9,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Puruse For Brews</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="stylesheet" type="text/css" href="./age.css">
     <link rel="stylesheet" type="text/css" href="./bubbleAnimations/bubbles.css">
@@ -62,25 +65,25 @@
 
             <div class="jumbotron text-white bg-dark">
                 <div>
-                <h1 class="title">Peruse For Brews</h1>
-                <br>
-                <h4 class="lead">It's Simple! Wherever You Are, Find Somewhere To Unwind.</h4>
-                <br>
-                <div id="container">
-                    <div class="glass">
-                        <div class="beer"></div>
+                    <h1 class="title">Peruse For Brews</h1>
+                    <br>
+                    <h4 class="lead">It's Simple! Wherever You Are, Find Somewhere To Unwind.</h4>
+                    <br>
+                    <div id="container">
+                        <div class="glass">
+                            <div class="beer"></div>
+                        </div>
+                        <div class="head"></div>
+                        <div class="pour"></div>
                     </div>
-                    <div class="head"></div>
-                    <div class="pour"></div>
+                    <hr class="my-4">
+                    <h5 id="ready">Ready? Click Below To Start Perusing!</h5>
                 </div>
-                <hr class="my-4">
-                <h5 id="ready">Ready? Click Below To Start Perusing!</h5>
-            </div>
-            <div id="nav">
-                <button id="start" href="#section2" role="button" class="btn btn-outline-light">Get Started</button>
+                <div id="nav">
+                    <button id="start" href="#section2" role="button" class="btn btn-outline-light">Get Started</button>
 
-                <a id="learn" href="LearnMore.html" role="button" class="btn btn-outline-light">Learn
-                    More</a>
+                    <a id="learn" href="LearnMore.html" role="button" class="btn btn-outline-light">Learn
+                        More</a>
                 </div>
             </div>
 
@@ -144,15 +147,15 @@
                 <li></li>
             </ul>
             <!--END of BUBBLES LIST-->
-            <div id="results" class="card">
+            <div class="card">
 
 
-                <div class="card-body">
+                <div d="results" class="card-body">
                     <div>
                         <button id="getLocation" type="submit" class="btn btn-dark">Get
                             Location</button>
                         <button id="review" type="submit" class="btn btn-dark">Reviews</button>
-                        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal">
+                        <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-dark">
                             <i class='fas fa-car fa-lg'></i>
                         </button>
                     </div>
@@ -161,35 +164,37 @@
                     <div id="r" class='container'></div>
 
 
-
                 </div>
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="myModal">Cruise For Brews</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <i class="fab fa-uber" style="font-size: 80px;" href="" class="card-link"
-                                    class="card-img-top" alt="..."></i>
-                                <p>Uber</p>
-                                <i class="fas fa-paw"></i>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No
-                                    Thanks!</button>
-                            </div>
+            </div>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                                <h3>Cruise For Brews</h3>
+                            <button type="button" class="close" data-toggle="modal">
+                                <span class="modal-title" id="myModalLabel"><span aria-hidden="true"&times;></span> <span
+                                        class="sr-only">Close</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" data-focus>
+                            <i class="fab fa-uber" style="font-size: 80px;" href="" class="card-link"
+                                class="card-img-top" alt="..."></i>
+                            <p>Uber</p>
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No
+                                Thanks!</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-   
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="age.js"></script>
     <script src="app.js"></script>
