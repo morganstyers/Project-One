@@ -1,35 +1,8 @@
 
 console.log("linked")
+
 $(document).ready(function () {
-
-
-  $("#section2").hide();
-
-  $("#start").on("click", function () {
-    $("#section2").show()
-    $("#section1").hide()
-  });
-
-  $("#back").on('click', function () {
-    $("#section2").hide()
-  })
-
-  function beerRise() {
-    $('.beer').addClass('fill');
-    $('.head').addClass('active');
-  }
-
-  function pourBeer() {
-    $('.pour').addClass('pouring');
-    beerRise();
-    setTimeout(function () {
-      $('.pour').addClass('end');
-    }, 1500);
-  }
-
-  setTimeout(function () {
-    pourBeer();
-  }, 2000)
+  var reviewUrl = ""
 
   $("#getLocation").on("click", function getLocation() {
     if (navigator.geolocation) {
@@ -99,7 +72,7 @@ $(document).ready(function () {
           console.log(state);
 
 
-          var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/matches?name=" + name + "&address1=" + address + "&city=charlotte" + "&state=NC" + "&country=US"
+          var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/matches?name=" + name + "&address1=" + address + "&city=" + city + "&state=" + state + "&country=US"
           console.log(queryurl)
           $.ajax({
             url: queryurl,
@@ -126,73 +99,72 @@ $(document).ready(function () {
                 })
                   .then(function (response) {
                     console.log(response);
+                    // for (var i = 0; i < response.reviews.length; i++) {
+                      reviewUrl = response.reviews[0].url;
+                      console.log("Yelp URL " + reviewUrl);
 
-                    var reviewUrl = response.reviews[0].url;
-                    console.log("Yelp URL " + reviewUrl);
+                      $("#review").on('click', function () {
+                        $(".response").hide();
+                        $(".review").show();
 
-
+                      });
+                      var reviewLink = reviewUrl.link(reviewUrl)
+                      var reviewDiv = $("<div class=review>");
+                      var reviewUl = $("<ul>");
+                      var reviewLi = $("<li>").html(name + "<br>" + reviewLink);
+                      console.log(reviewUrl + "review")
+            
+                      reviewUl.append(reviewLi);
+                      reviewDiv.append(reviewUl);
+            
+                      $(".card-body").append(reviewDiv)
+            
+                    
                   });
-              }
 
-              for (var i = 0; i < response.reviews.length; i++) {
-                var reviewUrl = response.reviews[i].url;
-                console.log("Yelp URL " + reviewUrl);
+                  
+             }
 
-                var reviewInfo = {
-                  name: name,
-                  url: reviewUrl,
-                };
-                console.log("brewery name " + reviewInfo.name);
-                console.log(reviewInfo.url);
-
-              }
             });
+
+          
+
+          if (phone === null || phone === undefined || website === null || website === undefined) {
+            phone = "";
+            website = "";
+          } else if (!website.includes("https://")) {
+            website = "https://" + website
+          }
+
+          var breweryData = {
+            name: name,
+            address: address,
+            phone: phone,
+            website: website.link(website),
+          };
+          console.log("Address: " + breweryData.address);
+          console.log(breweryData.name);
+          console.log(breweryData.phone);
+          console.log(breweryData);
+          // console.log(city);
+          // console.log(state);
+          var newDiv = $("<div class=response>");
+          var newUl = $("<ul>");
+          var newLi = $("<li>").html(breweryData.name + "<br>" + breweryData.address + "<br>" + breweryData.phone + "<br>" + breweryData.website);
+
+          // newLi.html(name);
+          // newLi.html(address);
+          // newLi.html(phone);
+
+          newUl.append(newLi);
+          newDiv.append(newUl);
+
+          $(".card-body").append(newDiv);
+
+
         }
 
+
       });
-
-    if (phone === null || phone === undefined || website === null || website === undefined) {
-      phone = "";
-      website = "";
-    } else if (!website.includes("https://")) {
-      website = "https://" + website
     }
-
-    var breweryData = {
-      name: name,
-      address: address,
-      phone: phone,
-      website: website.link(website),
-    };
-    console.log("Address: " + breweryData.address);
-    console.log(breweryData.name);
-    console.log(breweryData.phone);
-    console.log(breweryData);
-    // console.log(city);
-    // console.log(state);
-    var newDiv = $("<div class=response>");
-    var newUl = $("<ul>");
-    var newLi = $("<li>").html(breweryData.name + "<br>" + breweryData.address + "<br>" + breweryData.phone + "<br>" + breweryData.website);
-
-    // newLi.html(name);
-    // newLi.html(address);
-    // newLi.html(phone);
-
-    newUl.append(newLi);
-    newDiv.append(newUl);
-
-    $(".card-body").append(newDiv)
-
-    $("#review").on('click', function () {
-      $(".response").hide();
-    })
-    // var reviewDiv = $("<div class=review");
-    // var reviewUl = $("<ul>");
-    // var reviewLi = $("<li>");
-    // console.log(reviewInfo + "review")
-
-  }
-});
-
-
-
+    });
