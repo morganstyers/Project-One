@@ -178,9 +178,9 @@ text-align: center;
 }
 
 .card-deck{
-    z-index: 2;
+    z-index: 3;
     position: relative;
-    height: 240px;
+    height: 260px;
     width: 1200px;
     margin: auto; 
     background-color: #e9aa1815;
@@ -212,8 +212,6 @@ img{
 #bubbleContainer{
 
   position: relative;
-  overflow: hidden;
   height:100%;
   width:100%;
-
-}
+  }
