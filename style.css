@@ -204,14 +204,14 @@ img{
   width:100%;
 }
 #r{
-display:none;
-background: #fff;
-color: black;
-width: 30%;
-margin: 0 auto;
-margin-top: 25px;
-padding: 30px;
-}
+  display:none;
+  background: #ffffff30;
+  color: #343a40;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 30px;
+  }
 .review{
   display: none;
 }
