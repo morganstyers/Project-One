@@ -1,12 +1,46 @@
 body{
-    background-color: #e9ab18;
+    background-color: #e9aa18;
     z-index: 1;
     overflow-x: hidden;
     }
-
-
-.bubbles {
-
+    #learnMoreJT{
+      background-color: #e9aa1815;
+      z-index: 2;
+      color: rgb(255, 255, 255); 
+      position: relative;
+  }
+  
+  .card-deck{
+      
+      z-index: 2;
+      position: relative;
+      height: 200px;
+      width: 1200px;
+      margin: auto;
+      background-color: #e9aa1815; 
+   
+  }
+  .card-body{
+      
+      font-family: 'Karla', sans-serif;
+      
+  }
+  
+  .card{
+      background-color: #e9aa1815;
+      color: rgb(255, 255, 255); 
+      border-color: rgba(255, 255, 255, 0);
+  
+  }
+  
+  img{
+      height: 100px;
+      width: 100px; 
+      margin-left:35%;
+      display: flex;
+  }
+  .bubbles {
+  
     position: absolute; 
     top: 0; 
     left: 0; 
@@ -14,7 +48,7 @@ body{
     height: 100%;
     z-index: 1;
     transform: translateZ(0);
-}
+  }
 
 .bubbles li{
 
@@ -76,7 +110,7 @@ body{
     background-color: rgba(187, 187, 187, 0.171);
     border-radius: 50%;
     display: inline-block;
-    left: 88%; 
+    left: 32%; 
     animation-delay: 6s;
     animation-duration: 17s;
   }
@@ -121,7 +155,7 @@ body{
       background-color: rgba(245, 190, 128, 0.192);
       border-radius: 50%;
       display: inline-block;
-      left: 98%; 
+      left: 44%; 
       animation-duration: 20s;
     }
     .bubbles li:nth-child(10){
@@ -155,7 +189,7 @@ body{
           background-color: rgba(245, 190, 128, 0.192);
           border-radius: 50%;
           display: inline-block;
-          left: 68%; 
+          left: 58%; 
           animation-delay: 2s;
           animation-duration: 10s;
         }
@@ -211,7 +245,7 @@ body{
             background-color: rgba(245, 190, 128, 0.192);
             border-radius: 50%;
             display: inline-block;
-            left: 98%; 
+            left: 20%; 
             animation-delay: 2s;
             animation-duration: 10s;
           }
@@ -378,7 +412,7 @@ body{
                     background-color: rgba(235, 235, 235, 0.452);
                     border-radius: 50%;
                     display: inline-block;
-                    left: 92%; 
+                    left: 1%; 
                     animation-delay: 2s;
                     animation-duration: 18s;
                   }
@@ -590,7 +624,7 @@ body{
          transform: translateY(0);
       }
       100% {
-        -webkit-transform: translateY(-600px) rotate(360deg);
-        transform: translateY(-600px) rotate(360deg);
+        -webkit-transform: translateY(-600px) rotate(680deg);
+        transform: translateY(-600px) rotate(680deg);
       }
   }
