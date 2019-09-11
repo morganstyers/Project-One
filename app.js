@@ -30,6 +30,11 @@ $(document).ready(function () {
     pourBeer();
   }, 2000)
 
+  //end beer animation
+  //start js 
+
+  var reviewUrl = ""
+
   $("#getLocation").on("click", function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
@@ -98,7 +103,7 @@ $(document).ready(function () {
           console.log(state);
 
 
-          var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/matches?name=" + name + "&address1=" + address + "&city=charlotte" + "&state=NC" + "&country=US"
+          var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/matches?name=" + name + "&address1=" + address + "&city=" + city + "&state=" + state + "&country=US"
           console.log(queryurl)
           $.ajax({
             url: queryurl,
@@ -125,30 +130,35 @@ $(document).ready(function () {
                 })
                   .then(function (response) {
                     console.log(response);
-
-                    var reviewUrl = response.reviews[0].url;
-                    console.log("Yelp URL " + reviewUrl);
-
-
-                  });
-              }
-
-                    for (var i = 0; i < response.reviews.length; i++) {
-                      var reviewUrl = response.reviews[i].url;
+                    // for (var i = 0; i < response.reviews.length; i++) {
+                      reviewUrl = response.reviews[0].url;
                       console.log("Yelp URL " + reviewUrl);
 
-                      var reviewInfo = {
-                        name: name,
-                        url: reviewUrl,
-                      };
-                      console.log("brewery name " + reviewInfo.name);
-                      console.log(reviewInfo.url);
+                      $("#review").on('click', function () {
+                        $(".response").hide();
+                        $(".review").show();
 
-                   }
+                      });
+                      var reviewLink = reviewUrl.link(reviewUrl)
+                      var reviewDiv = $("<div class=review>");
+                      var reviewUl = $("<ul>");
+                      var reviewLi = $("<li>").html(name + "<br>" + reviewLink);
+                      console.log(reviewUrl + "review")
+            
+                      reviewUl.append(reviewLi);
+                      reviewDiv.append(reviewUl);
+            
+                      $(".card-body").append(reviewDiv)
+            
+                    
                   });
+
+                  
              }
 
             });
+
+          
 
           if (phone === null || phone === undefined || website === null || website === undefined) {
             phone = "";
@@ -180,16 +190,12 @@ $(document).ready(function () {
           newUl.append(newLi);
           newDiv.append(newUl);
 
-          $(".card-body").append(newDiv)
+          $(".card-body").append(newDiv);
 
-          $("#review").on('click', function () {
-            $(".response").hide();
-          })
-          // var reviewDiv = $("<div class=review");
-          // var reviewUl = $("<ul>");
-          // var reviewLi = $("<li>");
-          // console.log(reviewInfo + "review")
 
         }
-      });
 
+
+      });
+    }
+    });
