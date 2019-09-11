@@ -94,17 +94,26 @@ $(document).ready(function () {
                   .then(function (response) {
                     console.log(response);
                     // for (var i = 0; i < response.reviews.length; i++) {
-                      reviewUrl = response.reviews[i].url;
+                      reviewUrl = response.reviews[0].url;
                       console.log("Yelp URL " + reviewUrl);
 
-                      // var reviewInfo = {
-                      //   name: name,
-                      //   url: reviewUrl,
-                      // };
-                      // console.log("brewery name " + reviewInfo.name);
-                      // console.log(reviewInfo.url);
+                      $("#review").on('click', function () {
+                        $(".response").hide();
+                        $(".review").show();
 
-                  //  }
+                      });
+                      var reviewLink = reviewUrl.link(reviewUrl)
+                      var reviewDiv = $("<div class=review>");
+                      var reviewUl = $("<ul>");
+                      var reviewLi = $("<li>").html(name + "<br>" + reviewLink);
+                      console.log(reviewUrl + "review")
+            
+                      reviewUl.append(reviewLi);
+                      reviewDiv.append(reviewUl);
+            
+                      $(".card-body").append(reviewDiv)
+            
+
                   });
 
                   
@@ -145,15 +154,6 @@ $(document).ready(function () {
 
           $(".card-body").append(newDiv)
 
-          $("#review").on('click', function () {
-            $(".response").hide();
-          });
-
-
-          // var reviewDiv = $("<div class=review");
-          // var reviewUl = $("<ul>");
-          // var reviewLi = $("<li>");
-          // console.log(reviewUrl + "review")
 
         }
       });
