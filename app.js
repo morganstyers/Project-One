@@ -5,7 +5,7 @@ $(document).ready(function () {
   var reviewUrl = ""
 
   $("#getLocation").on("click", function getLocation() {
-    $('#r').show();
+    
     
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
@@ -47,7 +47,8 @@ $(document).ready(function () {
           newLi.html(address, name, phone);
           newUl.append(newLi);
           newDiv.append(newUl);
-
+          
+          $('#r').show();
           $(".card-text").append(newDiv)
 
           console.log("logging brewery " + name);

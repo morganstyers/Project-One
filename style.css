@@ -1,6 +1,5 @@
 
 .jumbotron{
-    
     text-align: center;
     display: block;
     margin: auto;
@@ -21,14 +20,6 @@ html {
 h3{
     text-align: center;
 }
-
-#section1 {
-    height: 600px;
-  }
-
-#section2 {
- margin-top: 55px;
-        height: 600px;}
 
  #container {
             width: 100px;
@@ -133,12 +124,7 @@ h3{
     margin-left: 43%; 
 }
 
-
-button, a{
- font-family: 'Permanent Marker', cursive;
-}
-
-#peruse, #start, #getLocation, #review{
+#peruse, #nav, #start, #getLocation, #review{
     font-family: 'Permanent Marker', cursive;
 }
 ul{
@@ -154,14 +140,19 @@ p, #lead, .card-body{
   color: rgb(255, 255, 255); 
   z-index: 2;
 }
-
-
+#section1 {
+  height: 600px;
+}
 #section2{
   text-align: center;
   position: relative;
   overflow: hidden;
+  margin-top: 55px;
+  height: 600px;
 }
-
+#ready{
+  margin-bottom:20px;
+}
 .people{
 margin: auto;
 text-align: center;
@@ -223,4 +214,7 @@ padding: 30px;
 }
 .review{
   display: none;
+}
+#myModal{
+  z-index: 4;
 }
