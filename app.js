@@ -2,44 +2,15 @@
 console.log("linked")
 
 $(document).ready(function () {
-  $("#section2").hide();
-
-  $("#start").on("click", function () {
-    $("#section2").show()
-    $("#section1").hide()
-  });
-
-  $("#back").on('click', function () {
-    $("#section2").hide()
-  })
-  
-  function beerRise() {
-    $('.beer').addClass('fill');
-    $('.head').addClass('active');
-  }
-
-  function pourBeer() {
-    $('.pour').addClass('pouring');
-    beerRise();
-    setTimeout(function () {
-      $('.pour').addClass('end');
-    }, 1500);
-  }
-
-  setTimeout(function () {
-    pourBeer();
-  }, 2000)
-
-  //end beer animation
-  //start js 
-
   var reviewUrl = ""
-
   $("#getLocation").on("click", function getLocation() {
+    
+    
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
     } else {
     }
+
   });
 
   function showPosition(position) {
@@ -76,6 +47,7 @@ $(document).ready(function () {
           newUl.append(newLi);
           newDiv.append(newUl);
 
+          $('#r').show();
           $(".card-text").append(newDiv)
 
           console.log("logging brewery " + name);
@@ -129,8 +101,10 @@ $(document).ready(function () {
                   }
                 })
                   .then(function (response) {
+                    
                     console.log(response);
                     // for (var i = 0; i < response.reviews.length; i++) {
+<<<<<<< HEAD
                       reviewUrl = response.reviews[0].url;
                       console.log("Yelp URL " + reviewUrl);
 
@@ -150,15 +124,36 @@ $(document).ready(function () {
             
                       $(".card-body").append(reviewDiv)
             
+=======
+                    reviewUrl = response.reviews[0].url;
+                    console.log("Yelp URL " + reviewUrl);
+
+                    $("#review").on('click', function () {
+                   
+                      $(".response").hide();
+                      $(".review").show();
+
+                    });
+                    var reviewLink = reviewUrl.link(reviewUrl)
+                    var reviewDiv = $("<div class=review>");
+                    var reviewUl = $("<ul>");
+                    var reviewLi = $("<li>").html(name + "<br>" +reviewLink);
+                    console.log(reviewUrl + "review")
+
+                    reviewUl.append(reviewLi);
+                    reviewDiv.append(reviewUl);
+
+                    $("#r").append(reviewDiv)
+>>>>>>> 827e9304e7fc3a7eacfdff85f21336b1a8aa3a08
 
                   });
 
-                  
-             }
+
+              }
 
             });
 
-          
+
 
           if (phone === null || phone === undefined || website === null || website === undefined) {
             phone = "";
@@ -190,6 +185,7 @@ $(document).ready(function () {
           newUl.append(newLi);
           newDiv.append(newUl);
 
+<<<<<<< HEAD
           $(".card-body").append(newDiv)
 
 
@@ -197,3 +193,10 @@ $(document).ready(function () {
       });
     }
   });
+=======
+          $("#r").append(newDiv);
+        }
+      });
+  }
+});
+>>>>>>> 827e9304e7fc3a7eacfdff85f21336b1a8aa3a08

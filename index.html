@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,137 +9,176 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Puruse For Brews</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./age.css">
     <link rel="stylesheet" type="text/css" href="./bubbleAnimations/bubbles.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:600,900,400' rel='stylesheet' type='text/css'>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+        type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <script integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/fb7708a265.js"></script>
-
 </head>
 
 <body>
-    <div id="section1">
-        <div class="jumbotron text-white bg-dark">
-            <h1 class="title">Peruse For Brews</h1>
+    <div class='form-popup' id='age'>
+        <div class="ageWrap ageGateActive">
+            <div id="ageGate">
 
-            <p class="lead">It's Simple! Wherever You Are, Find Somewhere To Unwind.</p>
+                <div class="border_wrap">
+                    <form name="ageGateForm" id="ageGateForm" class="cf">
+                        <input type="hidden" name="requiredAge" id="requiredAge" value="21">
+                        <h4>You must be 21 years of age to enter this site.</h4>
+                        <ul>
+                            <li><label>Month <span class="format">(MM)</span></label>
+                                <input type="tel" class="ageInput" name="birthMonth" id="birthMonth" maxlength="2"></li>
 
-            <div id="container">
-                <div class="glass">
-                    <div class="beer"></div>
+                            <li><label>Day <span class="format">(DD)</span></label>
+                                <input type="tel" class="ageInput" name="birthDay" id="birthDay" maxlength="2"></li>
+                            <li><label>Year <span class="format">(YYYY)</span></label>
+                                <input type="tel" class="ageInput" name="birthYear" id="birthYear" maxlength="4"></li>
+                            <li class="errors"></li>
+                        </ul>
+                        <input id="21" display="none" type="submit" name="submit" class="btn" value="I Agree">
+                    </form>
                 </div>
-                <div class="head"></div>
-                <div class="pour"></div>
             </div>
-            <hr class="my-4">
-            <p>Ready? Click below and let us know where <br>
-                you are by allowing our use of location services!</p>
+        </div>
+    </div>
+    <div id='page'>
+        <div id="section1">
 
-            <div class="container">
-                <a id="start" href="#section2" role="button" class="btn btn-outline-light">Get Started</a>
-                <a id="learn" href="LearnMore.html" role="button" class="btn btn-outline-light">Learn
-                    More</a>
+            <div class="jumbotron text-white bg-dark">
+                <div>
+                    <h1 class="title">Peruse For Brews</h1>
+                    <br>
+                    <h4 class="lead">It's Simple! Wherever You Are, Find Somewhere To Unwind.</h4>
+                    <br>
+                    <div id="container">
+                        <div class="glass">
+                            <div class="beer"></div>
+                        </div>
+                        <div class="head"></div>
+                        <div class="pour"></div>
+                    </div>
+                    <hr class="my-4">
+                    <h5 id="ready">Ready? Click Below To Start Perusing!</h5>
+                </div>
+                <div id="nav">
+                    <button id="start" href="#section2" role="button" class="btn btn-outline-light">Get Started</button>
+
+                    <a id="learn" href="LearnMore.html" role="button" class="btn btn-outline-light">Learn
+                        More</a>
+                </div>
             </div>
 
         </div>
-    </div>
-    <br>
-    <br>
-
-    <div id="section2">
-
-        <!--Bubbles animation list-->
-    <ul class="bubbles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-          <!--END of BUBBLES LIST-->
 
 
-        <div id="results" class="card">
-            <div class="card-body">
-                <div>
-                    <button id="getLocation" type="submit" class="btn btn-dark">Get
-                        Location</button>
-                    <button id="review" type="submit" class="btn btn-dark">Reviews</button>
-                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal">
-                        <i class='fas fa-car fa-lg'></i>
-                      </button>
-                    <button id="review" type="submit" class="btn btn-dark">Advice Column</button>
+        <br>
+        <br>
+        <div id="section2">
+            <ul class="bubbles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <!--END of BUBBLES LIST-->
+            <div class="card">
 
 
-                    <button id="car" type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal">
-                        <i class='fas fa-car'></i>
-                    </button>
+                <div d="results" class="card-body">
+                    <div>
+                        <button id="getLocation" type="submit" class="btn btn-dark">Get
+                            Location</button>
+                        <button id="review" type="submit" class="btn btn-dark">Reviews</button>
+                        <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-dark">
+                            <i class='fas fa-car fa-lg'></i>
+                        </button>
+                    </div>
+                    <br>
+                    <button id="back" role='button' href="#page" class='btn btn-dark'>Back</button>
+                    <div id="r" class='container'></div>
+
 
                 </div>
-                <br>
-                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
+            </div>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myModal">Cruise For Brews</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                <h3>Cruise For Brews</h3>
+                            <button type="button" class="close" data-toggle="modal">
+                                <span class="modal-title" id="myModalLabel"><span aria-hidden="true"&times;></span> <span
+                                        class="sr-only">Close</span>
                             </button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body" data-focus>
                             <i class="fab fa-uber" style="font-size: 80px;" href="" class="card-link"
                                 class="card-img-top" alt="..."></i>
                             <p>Uber</p>
@@ -147,21 +188,15 @@
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">No
                                 Thanks!</button>
                         </div>
-                      </div>
                     </div>
-                  </div>
+                </div>
             </div>
-
         </div>
-        <a id="back" role='button' href="#section1" class='btn btn-dark'>Back</a>
-
+    </div>
     </div>
 
-    <!--age verifcation modal-->
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <script src="age.js"></script>
     <script src="app.js"></script>
 
 
