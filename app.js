@@ -3,17 +3,14 @@ console.log("linked")
 
 $(document).ready(function () {
   var reviewUrl = ""
-
-  //end beer animation
-  //start js 
-
-  var reviewUrl = ""
-
   $("#getLocation").on("click", function getLocation() {
+    
+    
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
     } else {
     }
+
   });
 
   function showPosition(position) {
@@ -50,6 +47,7 @@ $(document).ready(function () {
           newUl.append(newLi);
           newDiv.append(newUl);
 
+          $('#r').show();
           $(".card-text").append(newDiv)
 
           console.log("logging brewery " + name);
@@ -103,36 +101,37 @@ $(document).ready(function () {
                   }
                 })
                   .then(function (response) {
+                    
                     console.log(response);
                     // for (var i = 0; i < response.reviews.length; i++) {
-                      reviewUrl = response.reviews[0].url;
-                      console.log("Yelp URL " + reviewUrl);
+                    reviewUrl = response.reviews[0].url;
+                    console.log("Yelp URL " + reviewUrl);
 
-                      $("#review").on('click', function () {
-                        $(".response").hide();
-                        $(".review").show();
+                    $("#review").on('click', function () {
+                   
+                      $(".response").hide();
+                      $(".review").show();
 
-                      });
-                      var reviewLink = reviewUrl.link(reviewUrl)
-                      var reviewDiv = $("<div class=review>");
-                      var reviewUl = $("<ul>");
-                      var reviewLi = $("<li>").html(name + "<br>" + reviewLink);
-                      console.log(reviewUrl + "review")
-            
-                      reviewUl.append(reviewLi);
-                      reviewDiv.append(reviewUl);
-            
-                      $(".card-body").append(reviewDiv)
-            
-                    
+                    });
+                    var reviewLink = reviewUrl.link(reviewUrl)
+                    var reviewDiv = $("<div class=review>");
+                    var reviewUl = $("<ul>");
+                    var reviewLi = $("<li>").html(name + "<br>" +reviewLink);
+                    console.log(reviewUrl + "review")
+
+                    reviewUl.append(reviewLi);
+                    reviewDiv.append(reviewUl);
+
+                    $("#r").append(reviewDiv)
+
                   });
 
-                  
-             }
+
+              }
 
             });
 
-          
+
 
           if (phone === null || phone === undefined || website === null || website === undefined) {
             phone = "";
@@ -164,12 +163,8 @@ $(document).ready(function () {
           newUl.append(newLi);
           newDiv.append(newUl);
 
-          $(".card-body").append(newDiv);
-
-
+          $("#r").append(newDiv);
         }
-
-
       });
-    }
-    });
+  }
+});

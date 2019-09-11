@@ -9,8 +9,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Puruse For Brews</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="stylesheet" type="text/css" href="./age.css">
     <link rel="stylesheet" type="text/css" href="./bubbleAnimations/bubbles.css">
@@ -33,7 +36,7 @@
 </head>
 
 <body>
-    <div id='age'>
+    <div class='form-popup' id='age'>
         <div class="ageWrap ageGateActive">
             <div id="ageGate">
 
@@ -51,7 +54,7 @@
                                 <input type="tel" class="ageInput" name="birthYear" id="birthYear" maxlength="4"></li>
                             <li class="errors"></li>
                         </ul>
-                        <input type="submit" name="submit" class="btn" value="I Agree">
+                        <input id="21" display="none" type="submit" name="submit" class="btn" value="I Agree">
                     </form>
                 </div>
             </div>
@@ -59,11 +62,12 @@
     </div>
     <div id='page'>
         <div id="section1">
-            
-                <div class="jumbotron text-white bg-dark">
+
+            <div class="jumbotron text-white bg-dark">
+                <div>
                     <h1 class="title">Peruse For Brews</h1>
                     <br>
-                    <p class="lead">It's Simple! Wherever You Are, Find Somewhere To Unwind.</p>
+                    <h4 class="lead">It's Simple! Wherever You Are, Find Somewhere To Unwind.</h4>
                     <br>
                     <div id="container">
                         <div class="glass">
@@ -73,12 +77,14 @@
                         <div class="pour"></div>
                     </div>
                     <hr class="my-4">
-                    <h6>Ready? Click Below To Allow Location Services!</h6>
-                    
-                <button id="start" href="#section2" role="button" class="btn btn-outline-light">Get Started</button>
+                    <h5 id="ready">Ready? Click Below To Start Perusing!</h5>
+                </div>
+                <div id="nav">
+                    <button id="start" href="#section2" role="button" class="btn btn-outline-light">Get Started</button>
 
-             <a id="learn" href="LearnMore.html" role="button" class="btn btn-outline-light">Learn
-                    More</a>
+                    <a id="learn" href="LearnMore.html" role="button" class="btn btn-outline-light">Learn
+                        More</a>
+                </div>
             </div>
 
         </div>
@@ -141,33 +147,38 @@
                 <li></li>
             </ul>
             <!--END of BUBBLES LIST-->
-            <div id="results" class="card">
-                <div class="card-body">
+            <div class="card">
+
+
+                <div d="results" class="card-body">
                     <div>
                         <button id="getLocation" type="submit" class="btn btn-dark">Get
                             Location</button>
                         <button id="review" type="submit" class="btn btn-dark">Reviews</button>
-                        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal">
+                        <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-dark">
                             <i class='fas fa-car fa-lg'></i>
                         </button>
                     </div>
                     <br>
-                    <button id="back" role='button' href="#section1" class='btn btn-dark'>Back</button>
-                </div>
+                    <button id="back" role='button' href="#page" class='btn btn-dark'>Back</button>
+                    <div id="r" class='container'></div>
 
+
+                </div>
             </div>
 
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                 aria-hidden="true">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myModal">Cruise For Brews</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                <h3>Cruise For Brews</h3>
+                            <button type="button" class="close" data-toggle="modal">
+                                <span class="modal-title" id="myModalLabel"><span aria-hidden="true"&times;></span> <span
+                                        class="sr-only">Close</span>
                             </button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body" data-focus>
                             <i class="fab fa-uber" style="font-size: 80px;" href="" class="card-link"
                                 class="card-img-top" alt="..."></i>
                             <p>Uber</p>
@@ -181,12 +192,8 @@
                 </div>
             </div>
         </div>
-
     </div>
-
     </div>
-    <!--age verifcation modal-->
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="age.js"></script>

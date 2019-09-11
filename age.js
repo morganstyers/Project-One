@@ -35,9 +35,13 @@
     });
   
     $("#back").on('click', function () {
-      $("#section2").hide()
-    })
-  
+      $("#section1").show()
+
+        $("#age").hide();
+        $("#section2").hide();
+      })
+   
+  $("#21").on('click', function(){
     function beerRise() {
       $('.beer').addClass('fill');
       $('.head').addClass('active');
@@ -48,7 +52,7 @@
       beerRise();
       setTimeout(function () {
         $('.pour').addClass('end');
-      }, 1900);
+      }, 1000);
     }
   
     setTimeout(function () {
@@ -56,6 +60,7 @@
     }, 2000)
   
   });
+})
   }
   // Calculate your age based on inputs
   $(function () {
