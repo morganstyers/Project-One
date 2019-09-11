@@ -63,7 +63,7 @@ $(document).ready(function () {
           console.log(city);
           console.log(state);
 
-
+//pat review stuff 
           var queryurl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/matches?name=" + name + "&address1=" + address + "&city=charlotte" + "&state=NC" + "&country=US"
           console.log(queryurl)
           $.ajax({
