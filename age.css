@@ -1,0 +1,211 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: -50px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: -50px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: -50px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: -50px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Montserrat", sans-serif;
+}
+
+.ageWrap {
+  background: #efefef;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#ageGate {
+  background: #fff;
+  margin: 0 auto;
+  width: 40%;
+  padding: 2%;
+  box-shadow: 0 0 25px -5px #bebebe;
+  border-radius: 10px;
+  display: block;
+   opacity: 1; 
+   visibility: visible; 
+   top: 10px;
+}
+
+#ageGateForm h4 {
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 0 0 1em;
+}
+#ageGateForm ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#ageGateForm ul li {
+  flex: 1;
+  flex-basis: 33%;
+  margin: 1em 0;
+}
+#ageGateForm label {
+  display: block;
+  font-size: .85em;
+  margin-bottom: 1em;
+  color: #676767;
+  text-align: left;
+}
+#ageGateForm input[type="tel"] {
+  font-size: 16px;
+  padding: .5em;
+  width: 95%;
+  display: block;
+  float: left;
+}
+#ageGateForm input[type="submit"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background:  #ffd000;
+  border: 0;
+  color: #06455e;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: .75em;
+  text-align: center;
+  padding: .75em 2.5em;
+  border-radius: 5px;
+  letter-spacing: .025em;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#ageGateForm input[type="submit"]:hover, #ageGateForm input[type="submit"]:active, #ageGateForm input[type="submit"]:focus {
+  outline: 0;
+  background: #b5e7fa;
+  color: #0a7aa6;
+}
+#ageGateForm .errors {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.message {
+  font-size: 1.25em;
+  animation: fadeIn;
+}
+
+@media only screen and (max-width: 45em) {
+  #ageGate {
+    width: 100%;
+  }
+
+  #ageGateForm {
+    width: 100%;
+  }
+  #ageGateForm li {
+    width: 100%;
+  }
+}
