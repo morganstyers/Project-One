@@ -4,9 +4,11 @@
     text-align: center;
     display: block;
     margin: auto;
+
+    padding-top: 45px;     
     padding-top: 10px;
     z-index: 3;
-             
+
 }
 
 html {
@@ -26,6 +28,7 @@ h3{
   }
 
 #section2 {
+ margin-top: 55px;
         height: 600px;}
 
  #container {
@@ -131,16 +134,18 @@ h3{
     margin-left: 43%; 
 }
 
-i{
-    margin: auto; 
+
+button, a{
+ font-family: 'Permanent Marker', cursive;
 }
 
-#peruse, #start, #learn, #getLocation, #review{
+#peruse, #start, #getLocation, #review{
     font-family: 'Permanent Marker', cursive;
 }
 ul{
   list-style:none;
 }
+
 p, #lead, .card-body{
     font-family: 'Karla', sans-serif;
 }
@@ -150,6 +155,7 @@ p, #lead, .card-body{
   color: rgb(255, 255, 255); 
   z-index: 2;
 }
+
 
 #section2{
   text-align: center;
@@ -170,9 +176,9 @@ text-align: center;
 }
 
 .card-deck{
-    z-index: 2;
+    z-index: 3;
     position: relative;
-    height: 240px;
+    height: 260px;
     width: 1200px;
     margin: auto; 
     background-color: #e9aa1815;
@@ -204,8 +210,6 @@ img{
 #bubbleContainer{
 
   position: relative;
-  overflow: hidden;
   height:100%;
   width:100%;
-
-}
+  }
