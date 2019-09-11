@@ -116,7 +116,7 @@ $(document).ready(function () {
                     var reviewLink = reviewUrl.link(reviewUrl)
                     var reviewDiv = $("<div class=review>");
                     var reviewUl = $("<ul>");
-                    var reviewLi = $("<li>").html(name + "<br>" +reviewLink);
+                    var reviewLi = $("<li>").html("Review Link" + "<br>" + reviewLink + "<br>" + "<br>");
                     console.log(reviewUrl + "review")
 
                     reviewUl.append(reviewLi);
