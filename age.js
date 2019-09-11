@@ -35,8 +35,12 @@
     });
   
     $("#back").on('click', function () {
-      $("#section2").hide()
-    })
+      $("#section1").show()
+
+        $("#age").hide();
+        $("#section2").hide();
+      })
+   
   
     function beerRise() {
       $('.beer').addClass('fill');

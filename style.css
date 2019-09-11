@@ -1,6 +1,4 @@
 
-    
-
 .jumbotron{
     
     text-align: center;
@@ -10,7 +8,6 @@
     padding-top: 45px;     
     padding-top: 10px;
     z-index: 3;
-
 }
 
 html {
@@ -214,4 +211,16 @@ img{
   position: relative;
   height:100%;
   width:100%;
+}
+#r{
+display:none;
+background: #fff;
+color: black;
+width: 30%;
+margin: 0 auto;
+margin-top: 25px;
+padding: 30px;
+}
+.review{
+  display: none;
 }
