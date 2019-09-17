@@ -209,6 +209,7 @@ img{
   width:100%;
 }
 #r{
+
 font-size: 20;
 display:none;
 background: #fff;
@@ -218,6 +219,7 @@ margin: 0 auto;
 margin-top: 25px;
 padding: 30px;
 }
+
 .review{
   display: none;
 }
