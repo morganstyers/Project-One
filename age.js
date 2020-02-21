@@ -42,6 +42,7 @@
       })
    
   $("#21").on('click', function(){
+    
     function beerRise() {
       $('.beer').addClass('fill');
       $('.head').addClass('active');
